@@ -16,11 +16,11 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         sass: {
-          additionalData: '@import "@/assets/styles/vars/variables.sass"',
+          // additionalData: '@import "@/assets/styles/vars/variables.sass"',
         },
       },
     },
   },
 
-  css: ['~/assets/styles/reset.css'],
+  css: ['~/assets/styles/reset.css', '~/assets/styles/main.sass'],
 });
