@@ -32,29 +32,40 @@ const aspectRatio = computed(() => width.value / height.value);
 const scene = new Scene();
 
 const camera = new PerspectiveCamera(50, aspectRatio.value, 0.1, 2000);
-camera.position.set(0, 0, 4);
+camera.position.set(0, 0, 0);
 
 scene.add(camera);
 
 const sphere1 = new Mesh(
-  new PlaneGeometry(1, 1),
+  new PlaneGeometry(
+    (width.value / height.value) * 0.66,
+    (height.value / height.value) * 0.66
+  ),
   new MeshBasicMaterial({ color: 0x008010 })
 );
 
 const sphere2 = new Mesh(
-  new PlaneGeometry(1, 1),
+  new PlaneGeometry(
+    (width.value / height.value) * 0.66,
+    (height.value / height.value) * 0.66
+  ),
   new MeshBasicMaterial({ color: 0x008880 })
 );
 
 const sphere3 = new Mesh(
-  new PlaneGeometry(1, 1),
+  new PlaneGeometry(
+    (width.value / height.value) * 0.66,
+    (height.value / height.value) * 0.66
+  ),
   new MeshBasicMaterial({ color: 0x035088 })
 );
 
 scene.add(sphere1, sphere2, sphere3);
 
-const objectsDistanceZ = 4;
+const objectsDistanceZ = 1;
 const objectsDistanceY = 1;
+const cameraDistanceZ = 1;
+const cameraDistanceY = 1;
 
 sphere1.position.z = -objectsDistanceZ * 1;
 sphere2.position.z = -objectsDistanceZ * 2;
@@ -85,11 +96,9 @@ function setRenderer() {
 
 const setScroll = (event) => {
   camera.position.z =
-    (-event.target.scrollingElement.scrollTop / height.value) *
-    objectsDistanceZ;
+    (-event.target.scrollingElement.scrollTop / height.value) * cameraDistanceZ;
   camera.position.y =
-    (event.target.scrollingElement.scrollTop / height.value) * objectsDistanceY;
-  console.log(event.target.scrollingElement.scrollTop);
+    (event.target.scrollingElement.scrollTop / height.value) * cameraDistanceY;
 };
 
 watch(aspectRatio, () => {
