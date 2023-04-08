@@ -8,6 +8,7 @@ specifiers:
   eslint: ^8.37.0
   eslint-config-prettier: ^8.8.0
   eslint-plugin-prettier: ^4.2.1
+  gsap: ^3.11.5
   nuxt: ^3.3.3
   prettier: ^2.8.7
   sass: ^1.61.0
@@ -23,6 +24,7 @@ dependencies:
   eslint: 8.37.0
   eslint-config-prettier: 8.8.0_eslint@8.37.0
   eslint-plugin-prettier: 4.2.1_ybb3aapb7235womryl2tm5ze2u
+  gsap: 3.11.5
   prettier: 2.8.7
   three: 0.151.3
   typescript: 5.0.4
@@ -3292,6 +3294,10 @@ packages:
 
   /grapheme-splitter/1.0.4:
     resolution: {integrity: sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==}
+
+  /gsap/3.11.5:
+    resolution: {integrity: sha512-Q89nKCLgoX5xUjznh9LcaIUkz54k1voNucT1Rpf9SJNFIQznBwFqt5qUUQbeVInFyN/n18OUJkpeI6CNEDt74w==}
+    dev: false
 
   /gzip-size/7.0.0:
     resolution: {integrity: sha512-O1Ld7Dr+nqPnmGpdhzLmMTQ4vAsD+rHwMm1NLUmoUFFymBOMKxCCrtDxqdBRYXdeEPEi3SyoR4TizJLQrnKBNA==}
