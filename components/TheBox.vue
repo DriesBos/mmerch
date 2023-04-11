@@ -6,11 +6,13 @@
 </template>
 
 <script setup lang="ts">
+import { Ref, onMounted } from 'vue';
+import { useWindowSize } from '@vueuse/core';
+
 import {
   Scene,
   PerspectiveCamera,
   Mesh,
-  SphereGeometry,
   PlaneGeometry,
   MeshBasicMaterial,
   WebGLRenderer,
@@ -20,11 +22,10 @@ import {
   PointsMaterial,
   Points,
 } from 'three';
-import { Ref, onMounted } from 'vue';
-import { useWindowSize } from '@vueuse/core';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { typeParameterInstantiation } from '@babel/types';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,9 +33,11 @@ let renderer: WebGLRenderer;
 
 const experience: Ref<HTMLCanvasElement | null> = ref(null);
 
+// VARS
 const { width, height } = useWindowSize();
 const aspectRatio = computed(() => width.value / height.value);
 
+// SCENE
 const scene = new Scene();
 
 // CAMERA
@@ -43,8 +46,19 @@ camera.position.set(0, 0, 1);
 
 scene.add(camera);
 
-// OBJECTS => BLOCKS
+// OBJECTS => MODELS
 
+const loader = new GLTFLoader();
+
+loader.load('/models/Shiba/scene.gltf', (gltf) => {
+  gltf.scene.position.set(1, 0.2, -2);
+  gltf.scene.scale.set(0.75, 0.75, 0.75);
+  gltf.scene.rotation.y = 0.1;
+  // gltf.rotation.y += 0.01;
+  scene.add(gltf.scene);
+});
+
+// OBJECTS => BLOCKS
 const sphere1 = new Mesh(
   new PlaneGeometry(
     (height.value / height.value) * 0.66,
@@ -61,23 +75,13 @@ const sphere2 = new Mesh(
   new MeshBasicMaterial({ color: 0xffffff })
 );
 
-const sphere3 = new Mesh(
-  new PlaneGeometry(
-    (height.value / height.value) * 0.66,
-    (height.value / height.value) * 1
-  ),
-  new MeshBasicMaterial({ color: 0xffffff })
-);
-
-scene.add(sphere1, sphere2, sphere3);
+scene.add(sphere1, sphere2);
 
 sphere1.position.z = -2;
 sphere2.position.z = -2;
-sphere3.position.z = -2;
 
 sphere1.position.x = 0;
 sphere2.position.x = -1;
-sphere3.position.x = 1;
 
 // OBJECTS => PARTICLES
 
