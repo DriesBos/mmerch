@@ -17,10 +17,13 @@ import {
   MeshBasicMaterial,
   WebGLRenderer,
   Clock,
+  MeshLambertMaterial,
   BufferGeometry,
   BufferAttribute,
   PointsMaterial,
   Points,
+  TextureLoader,
+  ImageLoader,
 } from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
@@ -46,19 +49,44 @@ camera.position.set(0, 0, 1);
 
 scene.add(camera);
 
+// PLAYIN
+// const newLoader = new ImageLoader();
+
+// // load a image resource
+// newLoader.load(
+//   // resource URL
+//   'images/album.jpeg',
+
+//   // onLoad callback
+//   function (image) {
+//     // use the image, e.g. draw part of it on a canvas
+//     const canvas = document.createElement('canvas');
+//     const context = canvas.getContext('2d');
+//     context.drawImage(image, 100, 100);
+//   },
+
+//   // onProgress callback currently not supported
+//   undefined,
+
+//   // onError callback
+//   function () {
+//     console.error('An error happened.');
+//   }
+// );
+
 // OBJECTS => MODELS
 
-const loader = new GLTFLoader();
+const shiba = new GLTFLoader();
 
-loader.load('/models/Shiba/scene.gltf', (gltf) => {
+shiba.load('/models/Shiba/scene.gltf', (gltf) => {
   gltf.scene.position.set(1, 0.2, -2);
   gltf.scene.scale.set(0.75, 0.75, 0.75);
-  gltf.scene.rotation.y = 0.1;
-  // gltf.rotation.y += 0.01;
+  // gltf.scene.rotation.y = -0.33;
   scene.add(gltf.scene);
 });
 
 // OBJECTS => BLOCKS
+
 const sphere1 = new Mesh(
   new PlaneGeometry(
     (height.value / height.value) * 0.66,
@@ -140,12 +168,14 @@ function setRenderer() {
 
 // PARALLAX
 const setParallax = (event) => {
-  const cursorX = event.clientX / (width.value * 8) - 0.0565;
-  const cursorY = event.clientY / (height.value * 8) - 0.0565;
+  const cursorX = event.clientX / (width.value * 1) - 0.5;
+  const cursorY = event.clientY / (height.value * 1) - 0.5;
+  const rotateX = event.clientX / (width.value * 2) - 0.25;
+  const rotateY = event.clientY / (height.value * 2) - 0.25;
   camera.position.x = cursorX;
   camera.position.y = -cursorY;
-  camera.rotation.x = -cursorY;
-  camera.rotation.y = -cursorX;
+  camera.rotation.x = rotateY;
+  camera.rotation.y = rotateX;
 };
 
 // LIFECYCLE HOOKS
@@ -163,6 +193,7 @@ onMounted(() => {
 });
 
 const loop = () => {
+  // shiba.rotation.y += 0.005;
   updateRenderer();
   requestAnimationFrame(loop);
 };
