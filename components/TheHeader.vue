@@ -19,18 +19,20 @@
   right: 2rem
   z-index: +1
   display: flex
-  background: grey
+  background: #C8C4B8
   border-radius: 1000px
   text-decoration: none
   cursor: pointer
   & > a
+    width: 107px
     color: white
     text-transform: uppercase
-    padding: .5rem 1rem
+    padding: .66rem 1.32rem
     border-radius: 1000px
     text-decoration: none
     font-family: Arial, Helvetica, sans-serif
+    text-align: center
     &.router-link-exact-active
-      background: green
+      background: #E65a29
       text-decoration: none
 </style>
