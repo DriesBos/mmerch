@@ -72,11 +72,8 @@ shiba.load('/models/Shiba/scene.gltf', (gltf) => {
 // OBJECTS => BLOCKS
 
 // Loading image
-// const imageLoader = new ImageLoader();
-// imageLoader.load('images/album.jpeg');
-
-// const texture = new TextureLoader().load('/images/album.jpeg');
-// console.log(texture);
+// const imageLoader = new TextureLoader();
+// const texture = imageLoader.load('/images/album.jpeg');
 
 const sphere1 = new Mesh(
   new PlaneGeometry(
@@ -92,8 +89,7 @@ const sphere2 = new Mesh(
     (height.value / height.value) * 1
   ),
   new MeshBasicMaterial({ color: 0xffffff })
-  // new TextureLoader().load(
-  // require("@/models/images/album.jpeg")
+  // new MeshBasicMaterial({ map: texture })
 );
 
 scene.add(sphere1, sphere2);
