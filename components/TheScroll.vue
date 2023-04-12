@@ -15,6 +15,8 @@ import {
   Clock,
   GridHelper,
 } from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
 import { Ref, onMounted } from 'vue';
 import { useWindowSize } from '@vueuse/core';
 import gsap from 'gsap';
@@ -46,7 +48,18 @@ camera.position.set(0, 0, 0);
 
 scene.add(camera);
 
-// OBJECTS => PLANES
+// OBJECTS
+
+// => SHIBA
+const shiba = new GLTFLoader();
+
+shiba.load('/models/Shiba/scene.gltf', (gltf) => {
+  gltf.scene.position.set(0, 2, -4.5);
+  gltf.scene.scale.set(0.75, 0.75, 0.75);
+  scene.add(gltf.scene);
+});
+
+// => PLANES
 const sphere1 = new Mesh(
   new PlaneGeometry(
     (width.value / height.value) * 0.66,
@@ -71,7 +84,7 @@ const sphere3 = new Mesh(
   new MeshBasicMaterial({ color: 0x000000 })
 );
 
-scene.add(sphere1, sphere2, sphere3);
+scene.add(sphere1, sphere2);
 
 const objectsDistanceZ = 1.5;
 const objectsDistanceY = 1;
