@@ -1,7 +1,7 @@
 <template>
   <div class="webgl" div ref="content">
     <TheHeader />
-    <div class="shiba" @click="shibaCamera()"><p>SHIBA</p></div>
+    <!-- <div class="shiba" @click="shibaCamera()"><p>SHIBA</p></div> -->
     <canvas ref="experience" />
   </div>
 </template>
@@ -25,6 +25,7 @@ import {
   Points,
   TextureLoader,
   ImageLoader,
+  GridHelper,
 } from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
@@ -44,9 +45,17 @@ const aspectRatio = computed(() => width.value / height.value);
 // SCENE
 const scene = new Scene();
 
+// GRID
+
+// const size = 10;
+// const divisions = 10;
+
+// const gridHelper = new GridHelper(size, divisions);
+// scene.add(gridHelper);
+
 // CAMERA
 const camera = new PerspectiveCamera(50, aspectRatio.value, 0.1, 2000);
-camera.position.set(0, 0, 1);
+camera.position.set(0, 0, 0);
 
 scene.add(camera);
 
@@ -97,28 +106,28 @@ sphere2.position.x = -1;
 
 // OBJECTS => PARTICLES
 
-const particlesCount = 5000;
-const positions = new Float32Array(particlesCount * 3);
-const colors = new Float32Array(particlesCount * 3);
+// const particlesCount = 5000;
+// const positions = new Float32Array(particlesCount * 3);
+// const colors = new Float32Array(particlesCount * 3);
 
-for (let i = 0; i < particlesCount * 3; i++) {
-  positions[i] = (Math.random() - 0.5) * 10;
-  colors[i] = Math.random();
-}
+// for (let i = 0; i < particlesCount * 3; i++) {
+//   positions[i] = (Math.random() - 0.5) * 10;
+//   colors[i] = Math.random();
+// }
 
-const particlesGeometry = new BufferGeometry();
-particlesGeometry.setAttribute('position', new BufferAttribute(positions, 3));
-particlesGeometry.setAttribute('color', new BufferAttribute(colors, 3));
+// const particlesGeometry = new BufferGeometry();
+// particlesGeometry.setAttribute('position', new BufferAttribute(positions, 3));
+// particlesGeometry.setAttribute('color', new BufferAttribute(colors, 3));
 
-const particlesMaterial = new PointsMaterial({
-  // color: parameters.materialColor,
-  // color: 0xcccccc,
-  sizeAttenuation: true,
-  size: 0.03,
-});
+// const particlesMaterial = new PointsMaterial({
+//   // color: parameters.materialColor,
+//   // color: 0xcccccc,
+//   sizeAttenuation: true,
+//   size: 0.03,
+// });
 
-const particles = new Points(particlesGeometry, particlesMaterial);
-scene.add(particles);
+// const particles = new Points(particlesGeometry, particlesMaterial);
+// scene.add(particles);
 
 // CLOCK
 
@@ -137,9 +146,9 @@ function updateCamera() {
   camera.updateProjectionMatrix();
 }
 
-function shibaCamera() {
-  camera.position.set(0.75, 0.25, -0.75);
-}
+// function shibaCamera() {
+//   camera.position.set(0.75, 0.5, 0);
+// }
 
 function updateRenderer() {
   renderer.setSize(width.value, height.value);
