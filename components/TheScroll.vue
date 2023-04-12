@@ -13,10 +13,6 @@ import {
   MeshBasicMaterial,
   WebGLRenderer,
   Clock,
-  BufferGeometry,
-  BufferAttribute,
-  PointsMaterial,
-  Points,
   GridHelper,
 } from 'three';
 import { Ref, onMounted } from 'vue';
@@ -38,8 +34,8 @@ const scene = new Scene();
 
 // GRIDHELPER
 
-const size = 10;
-const divisions = 10;
+const size = 100;
+const divisions = 100;
 const gridHelper = new GridHelper(size, divisions);
 gridHelper.position.y = -0.33;
 scene.add(gridHelper);
