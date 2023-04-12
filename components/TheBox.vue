@@ -45,7 +45,7 @@ const aspectRatio = computed(() => width.value / height.value);
 // SCENE
 const scene = new Scene();
 
-// GRIDHELPER
+// GRID
 
 // const size = 10;
 // const divisions = 10;
@@ -149,6 +149,7 @@ function updateCamera() {
 function updateRenderer() {
   renderer.setSize(width.value, height.value);
   renderer.render(scene, camera);
+  renderer.setClearColor(0x3761d6, 1);
 }
 
 function setRenderer() {
