@@ -1,5 +1,6 @@
 <template>
   <div class="page page-Scroll">
+    <TheHeader />
     <TheScroll />
   </div>
 </template>

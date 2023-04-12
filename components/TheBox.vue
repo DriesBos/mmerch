@@ -1,6 +1,5 @@
 <template>
   <div class="webgl" div ref="content">
-    <TheHeader />
     <!-- <div class="shiba" @click="shibaCamera()"><p>SHIBA</p></div> -->
     <canvas ref="experience" />
   </div>

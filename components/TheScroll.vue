@@ -1,6 +1,5 @@
 <template>
   <div class="webgl" div ref="content">
-    <TheHeader />
     <canvas ref="experience" />
   </div>
 </template>

@@ -1,5 +1,6 @@
 <template>
   <div class="page page-Box">
+    <TheHeader />
     <TheBox />
   </div>
 </template>
