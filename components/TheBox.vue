@@ -17,14 +17,6 @@ import {
   MeshBasicMaterial,
   WebGLRenderer,
   Clock,
-  MeshLambertMaterial,
-  BufferGeometry,
-  BufferAttribute,
-  PointsMaterial,
-  Points,
-  TextureLoader,
-  ImageLoader,
-  GridHelper,
 } from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
@@ -43,14 +35,6 @@ const aspectRatio = computed(() => width.value / height.value);
 
 // SCENE
 const scene = new Scene();
-
-// GRID
-
-// const size = 10;
-// const divisions = 10;
-
-// const gridHelper = new GridHelper(size, divisions);
-// scene.add(gridHelper);
 
 // CAMERA
 const camera = new PerspectiveCamera(50, aspectRatio.value, 0.1, 2000);
@@ -79,7 +63,7 @@ const sphere1 = new Mesh(
     (height.value / height.value) * 0.66,
     (height.value / height.value) * 1
   ),
-  new MeshBasicMaterial({ color: 0xffffff })
+  new MeshBasicMaterial({ color: 0xabfb00 })
 );
 
 const sphere2 = new Mesh(
@@ -87,7 +71,7 @@ const sphere2 = new Mesh(
     (height.value / height.value) * 0.66,
     (height.value / height.value) * 1
   ),
-  new MeshBasicMaterial({ color: 0xffffff })
+  new MeshBasicMaterial({ color: 0xabfb00 })
   // new MeshBasicMaterial({ map: texture })
 );
 
@@ -148,7 +132,7 @@ function updateCamera() {
 function updateRenderer() {
   renderer.setSize(width.value, height.value);
   renderer.render(scene, camera);
-  renderer.setClearColor(0x3761d6, 1);
+  renderer.setClearColor(0x0f22fd, 1);
 }
 
 function setRenderer() {

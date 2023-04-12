@@ -11,5 +11,5 @@
     position: relative
     width: 100%
     height: 100%
-    background: #3761D6
+    background: #F0FFF2
 </style>
