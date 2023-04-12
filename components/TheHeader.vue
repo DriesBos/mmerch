@@ -1,5 +1,8 @@
 <template>
   <div class="header">
+    <NuxtLink to="/" class="header-Logo_Item">
+      <h1>home</h1>
+    </NuxtLink>
     <NuxtLink to="/box" class="header-Logo_Item">
       <h1>box</h1>
     </NuxtLink>
