@@ -18,6 +18,7 @@ import {
   BufferAttribute,
   PointsMaterial,
   Points,
+  GridHelper,
 } from 'three';
 import { Ref, onMounted } from 'vue';
 import { useWindowSize } from '@vueuse/core';
@@ -33,8 +34,18 @@ const experience: Ref<HTMLCanvasElement | null> = ref(null);
 const { width, height } = useWindowSize();
 const aspectRatio = computed(() => width.value / height.value);
 
+// SCENE
 const scene = new Scene();
 
+// GRIDHELPER
+
+const size = 10;
+const divisions = 10;
+const gridHelper = new GridHelper(size, divisions);
+gridHelper.position.y = -0.33;
+scene.add(gridHelper);
+
+// CAMERA
 const camera = new PerspectiveCamera(50, aspectRatio.value, 0.1, 2000);
 camera.position.set(0, 0, 0);
 
@@ -46,7 +57,7 @@ const sphere1 = new Mesh(
     (width.value / height.value) * 0.66,
     (height.value / height.value) * 0.66
   ),
-  new MeshBasicMaterial({ color: 0xffffff })
+  new MeshBasicMaterial({ color: 0x000000 })
 );
 
 const sphere2 = new Mesh(
@@ -54,7 +65,7 @@ const sphere2 = new Mesh(
     (width.value / height.value) * 0.66,
     (height.value / height.value) * 0.66
   ),
-  new MeshBasicMaterial({ color: 0xe6e6e6 })
+  new MeshBasicMaterial({ color: 0x000000 })
 );
 
 const sphere3 = new Mesh(
@@ -62,34 +73,10 @@ const sphere3 = new Mesh(
     (width.value / height.value) * 0.66,
     (height.value / height.value) * 0.66
   ),
-  new MeshBasicMaterial({ color: 0xcccccc })
+  new MeshBasicMaterial({ color: 0x000000 })
 );
 
-const sphere4 = new Mesh(
-  new PlaneGeometry(
-    (width.value / height.value) * 0.66,
-    (height.value / height.value) * 0.66
-  ),
-  new MeshBasicMaterial({ color: 0xb3b3b3 })
-);
-
-const sphere5 = new Mesh(
-  new PlaneGeometry(
-    (width.value / height.value) * 0.66,
-    (height.value / height.value) * 0.66
-  ),
-  new MeshBasicMaterial({ color: 0x999999 })
-);
-
-const sphere6 = new Mesh(
-  new PlaneGeometry(
-    (width.value / height.value) * 0.66,
-    (height.value / height.value) * 0.66
-  ),
-  new MeshBasicMaterial({ color: 0x808080 })
-);
-
-scene.add(sphere1, sphere2, sphere3, sphere4, sphere5, sphere6);
+scene.add(sphere1, sphere2, sphere3);
 
 const objectsDistanceZ = 1.5;
 const objectsDistanceY = 1;
@@ -99,41 +86,35 @@ const cameraDistanceY = 1;
 sphere1.position.z = -objectsDistanceZ * 1;
 sphere2.position.z = -objectsDistanceZ * 2;
 sphere3.position.z = -objectsDistanceZ * 3;
-sphere4.position.z = -objectsDistanceZ * 4;
-sphere5.position.z = -objectsDistanceZ * 5;
-sphere6.position.z = -objectsDistanceZ * 6;
 
 sphere1.position.y = objectsDistanceY * 0;
 sphere2.position.y = objectsDistanceY * 1;
 sphere3.position.y = objectsDistanceY * 2;
-sphere4.position.y = objectsDistanceY * 3;
-sphere5.position.y = objectsDistanceY * 4;
-sphere6.position.y = objectsDistanceY * 5;
 
 // OBJECTS => PARTICLES
 
-const particlesCount = 5000;
-const positions = new Float32Array(particlesCount * 3);
-const colors = new Float32Array(particlesCount * 3);
+// const particlesCount = 5000;
+// const positions = new Float32Array(particlesCount * 3);
+// const colors = new Float32Array(particlesCount * 3);
 
-for (let i = 0; i < particlesCount * 3; i++) {
-  positions[i] = (Math.random() - 0.5) * 10;
-  colors[i] = Math.random();
-}
+// for (let i = 0; i < particlesCount * 3; i++) {
+//   positions[i] = (Math.random() - 0.5) * 10;
+//   colors[i] = Math.random();
+// }
 
-const particlesGeometry = new BufferGeometry();
-particlesGeometry.setAttribute('position', new BufferAttribute(positions, 3));
-particlesGeometry.setAttribute('color', new BufferAttribute(colors, 3));
+// const particlesGeometry = new BufferGeometry();
+// particlesGeometry.setAttribute('position', new BufferAttribute(positions, 3));
+// particlesGeometry.setAttribute('color', new BufferAttribute(colors, 3));
 
-const particlesMaterial = new PointsMaterial({
-  // color: parameters.materialColor,
-  // color: 0xcccccc,
-  sizeAttenuation: true,
-  size: 0.03,
-});
+// const particlesMaterial = new PointsMaterial({
+//   // color: parameters.materialColor,
+//   // color: 0xcccccc,
+//   sizeAttenuation: true,
+//   size: 0.03,
+// });
 
-const particles = new Points(particlesGeometry, particlesMaterial);
-scene.add(particles);
+// const particles = new Points(particlesGeometry, particlesMaterial);
+// scene.add(particles);
 
 // CLOCK
 const clock = new Clock();

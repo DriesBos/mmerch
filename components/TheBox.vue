@@ -45,7 +45,7 @@ const aspectRatio = computed(() => width.value / height.value);
 // SCENE
 const scene = new Scene();
 
-// GRID
+// GRIDHELPER
 
 // const size = 10;
 // const divisions = 10;
