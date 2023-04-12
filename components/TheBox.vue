@@ -1,6 +1,7 @@
 <template>
   <div class="webgl" div ref="content">
     <TheHeader />
+    <div class="shiba" @click="shibaCamera()"><p>SHIBA</p></div>
     <canvas ref="experience" />
   </div>
 </template>
@@ -49,31 +50,6 @@ camera.position.set(0, 0, 1);
 
 scene.add(camera);
 
-// PLAYIN
-// const newLoader = new ImageLoader();
-
-// // load a image resource
-// newLoader.load(
-//   // resource URL
-//   'images/album.jpeg',
-
-//   // onLoad callback
-//   function (image) {
-//     // use the image, e.g. draw part of it on a canvas
-//     const canvas = document.createElement('canvas');
-//     const context = canvas.getContext('2d');
-//     context.drawImage(image, 100, 100);
-//   },
-
-//   // onProgress callback currently not supported
-//   undefined,
-
-//   // onError callback
-//   function () {
-//     console.error('An error happened.');
-//   }
-// );
-
 // OBJECTS => MODELS
 
 const shiba = new GLTFLoader();
@@ -81,11 +57,17 @@ const shiba = new GLTFLoader();
 shiba.load('/models/Shiba/scene.gltf', (gltf) => {
   gltf.scene.position.set(1, 0.2, -2);
   gltf.scene.scale.set(0.75, 0.75, 0.75);
-  // gltf.scene.rotation.y = -0.33;
   scene.add(gltf.scene);
 });
 
 // OBJECTS => BLOCKS
+
+// Loading image
+// const imageLoader = new ImageLoader();
+// imageLoader.load('images/album.jpeg');
+
+// const texture = new TextureLoader().load('/images/album.jpeg');
+// console.log(texture);
 
 const sphere1 = new Mesh(
   new PlaneGeometry(
@@ -101,6 +83,8 @@ const sphere2 = new Mesh(
     (height.value / height.value) * 1
   ),
   new MeshBasicMaterial({ color: 0xffffff })
+  // new TextureLoader().load(
+  // require("@/models/images/album.jpeg")
 );
 
 scene.add(sphere1, sphere2);
@@ -144,7 +128,6 @@ const tick = () => {
   const previousTime = 0;
   const elapsedTime = clock.getElapsedTime;
   const deltaTime = elapsedTime - previousTime;
-  console.log('TIME', clock.getElapsedTime.value);
 };
 
 // FUNCTIONS
@@ -152,6 +135,10 @@ const tick = () => {
 function updateCamera() {
   camera.aspect = aspectRatio.value;
   camera.updateProjectionMatrix();
+}
+
+function shibaCamera() {
+  camera.position.set(0.75, 0.25, -0.75);
 }
 
 function updateRenderer() {
@@ -206,4 +193,19 @@ const loop = () => {
   top: 0
   width: 100%
   height: 100%
+
+.shiba
+  position: fixed
+  left: 2rem
+  top: 1rem
+  color: white
+  text-transform: uppercase
+  padding: .5rem 1rem
+  border-radius: 1000px
+  text-decoration: none
+  font-family: Arial, Helvetica, sans-serif
+  background: grey
+  cursor: pointer
+  &:hover
+    background: green
 </style>

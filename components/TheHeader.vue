@@ -19,6 +19,7 @@
   background: grey
   border-radius: 1000px
   text-decoration: none
+  cursor: pointer
   & > a
     color: white
     text-transform: uppercase
