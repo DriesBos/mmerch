@@ -34,8 +34,8 @@
     </div>
     <div class="header-Nav">
       <NuxtLink to="/" class="header-Logo_Item"> home </NuxtLink>
-      <NuxtLink to="/box" class="header-Logo_Item"> box </NuxtLink>
-      <NuxtLink to="/scroll" class="header-Logo_Item"> scroll </NuxtLink>
+      <NuxtLink to="/box" class="header-Logo_Item"> 3D box </NuxtLink>
+      <NuxtLink to="/scroll" class="header-Logo_Item"> 3D scroll </NuxtLink>
     </div>
   </div>
 </template>
@@ -60,13 +60,15 @@
     padding: 1rem 2rem
     span
       animation-name: textTransform
-      animation-duration: 360s
+      animation-duration: 600s
       animation-iteration-count: infinite
       animation-direction: alternate
+      animation-timing-function: linear
     &::-webkit-scrollbar
       display: none
   &-Nav
     display: flex
+    flex-shrink: 0
     & > a
       color: black
       font-family: Space Medium
