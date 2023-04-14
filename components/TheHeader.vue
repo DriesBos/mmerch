@@ -15,6 +15,20 @@
         mmERCH playground your mmERCH playground your mmERCH playground your
         mmERCH playground your mmERCH playground your mmERCH playground your
         mmERCH playground your mmERCH playground your mmERCH playground your
+        mmERCH playground your mmERCH playground your mmERCH playground your
+        mmERCH playground your mmERCH playground your mmERCH playground your
+        mmERCH playground your mmERCH playground your mmERCH playground your
+        mmERCH playground your mmERCH playground your mmERCH playground your
+        mmERCH playground your mmERCH playground your mmERCH playground your
+        mmERCH playground your mmERCH playground your mmERCH playground your
+        mmERCH playground your mmERCH playground your mmERCH playground your
+        mmERCH playground your mmERCH playground your mmERCH playground your
+        mmERCH playground your mmERCH playground your mmERCH playgroundyour
+        mmERCH playground your mmERCH playground your mmERCH playground your
+        mmERCH playground your mmERCH playground your mmERCH playground your
+        mmERCH playground your mmERCH playground your mmERCH playground your
+        mmERCH playground your mmERCH playground your mmERCH playground your
+        mmERCH playground your mmERCH playground your mmERCH playground your
         mmERCH playground your mmERCH playground your mmERCH playground
       </span>
     </div>
@@ -46,7 +60,7 @@
     padding: 1rem 2rem
     span
       animation-name: textTransform
-      animation-duration: 180s
+      animation-duration: 360s
       animation-iteration-count: infinite
       animation-direction: alternate
     &::-webkit-scrollbar
@@ -57,7 +71,7 @@
       color: black
       font-family: Space Medium
       font-size: 1.68rem
-      padding: 1rem 2rem
+      padding: 1rem 1rem
       text-decoration: none
       border-left: 2px solid black
       &.router-link-exact-active
@@ -68,5 +82,5 @@
   from
     transform: translateX(0)
   to
-    transform: translateX(-100%)
+    transform: translateX(-90%)
 </style>
