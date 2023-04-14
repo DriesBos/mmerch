@@ -1,5 +1,5 @@
 <template>
-  <div class="webgl" div ref="content">
+  <div class="webgl block" div ref="content">
     <!-- <div class="shiba" @click="shibaCamera()"><p>SHIBA</p></div> -->
     <canvas ref="experience" />
   </div>
@@ -176,24 +176,17 @@ const loop = () => {
 </script>
 
 <style lang="sass">
-.webgl
-  position: fixed
-  left: 0
-  top: 0
-  width: 100%
-  height: 100%
 
-.shiba
-  position: fixed
-  left: 2rem
-  top: 1rem
-  color: white
-  text-transform: uppercase
-  padding: .5rem 1rem
-  border-radius: 1000px
-  text-decoration: none
-  background: grey
-  cursor: pointer
-  &:hover
-    background: green
+// .shiba
+//   position: fixed
+//   left: 2rem
+//   top: 1rem
+//   color: white
+//   text-transform: uppercase
+//   padding: .5rem 1rem
+//   text-decoration: none
+//   background: grey
+//   cursor: pointer
+//   &:hover
+//     background: green
 </style>

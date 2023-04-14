@@ -1,5 +1,5 @@
 <template>
-  <div class="webgl" div ref="content">
+  <div class="webgl block" div ref="content">
     <canvas ref="experience" />
   </div>
 </template>
@@ -167,12 +167,3 @@ const loop = () => {
   requestAnimationFrame(loop);
 };
 </script>
-
-<style lang="sass">
-.webgl
-  position: fixed
-  left: 0
-  top: 0
-  width: 100%
-  height: 100%
-</style>

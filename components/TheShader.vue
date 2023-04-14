@@ -1,5 +1,5 @@
 <template>
-  <div class="shader">
+  <div class="shader block">
     <!-- <img class="shader-Image" src="~/assets/images/michael.png" /> -->
     <!-- <canvas class="glslCanvas" data-fragment-url="shader.frag" data-textures="~/assets/images/michael.png" width="500" height="500"></canvas> -->
   </div>

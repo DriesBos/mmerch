@@ -10,6 +10,5 @@
   &-Scroll
     position: relative
     width: 100%
-    height: 350vh
-    background: white
+    height: 300vh
 </style>
