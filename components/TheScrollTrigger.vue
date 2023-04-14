@@ -39,13 +39,13 @@ export default {
         ease: 'circ',
       });
 
-      gsap.to('.scrollTrigger-Card_Left', 0.33, {
+      gsap.to('.scrollTrigger-Card_Left', 0.66, {
         delay: 1.33,
         x: '-107%',
         ease: 'ease',
       });
 
-      gsap.to('.scrollTrigger-Card_Right', 0.33, {
+      gsap.to('.scrollTrigger-Card_Right', 0.66, {
         delay: 1.33,
         x: '107%',
         ease: 'ease',
@@ -93,5 +93,5 @@ $width: 33vh
     height: 0%
     width: $width
     background: $color-grey
-    border: 2px solid black
+    opacity: .66
 </style>
