@@ -1,6 +1,6 @@
 <template>
   <div class="page page-ScrollTrigger">
-    <TheScrollTrigger />
+    <TheTrifecta />
   </div>
 </template>
 
