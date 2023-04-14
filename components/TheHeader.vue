@@ -59,7 +59,7 @@
       font-size: 1.68rem
       padding: 1rem 2rem
       text-decoration: none
-      border-left: 1px solid black
+      border-left: 2px solid black
       &.router-link-exact-active
         color: white !important
         background: $color-red
