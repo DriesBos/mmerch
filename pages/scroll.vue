@@ -7,5 +7,5 @@
 <style lang="sass">
 .page
   &-Scroll
-    height: 300vh
+    height: 275vh
 </style>
