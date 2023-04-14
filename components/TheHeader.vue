@@ -30,7 +30,6 @@
     padding: .66rem 1.32rem
     border-radius: 1000px
     text-decoration: none
-    font-family: Arial, Helvetica, sans-serif
     text-align: center
     &.router-link-exact-active
       background: #E65a29

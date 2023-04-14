@@ -192,7 +192,6 @@ const loop = () => {
   padding: .5rem 1rem
   border-radius: 1000px
   text-decoration: none
-  font-family: Arial, Helvetica, sans-serif
   background: grey
   cursor: pointer
   &:hover

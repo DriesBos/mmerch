@@ -1,0 +1,170 @@
+
+@font-face
+  font-family: 'Circular Black'
+  src: url('~/assets/fonts/CircularPro-Black.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'Circular Black'
+  src: url('~/assets/fonts/CircularPro-BlackItalic.woff') format('woff')
+  font-weight: normal
+  font-style: italic
+
+@font-face
+  font-family: 'Circular Bold'
+  src: url('~/assets/fonts/CircularPro-Bold.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'Circular Bold'
+  src: url('~/assets/fonts/CircularPro-BoldItalic.woff') format('woff')
+  font-weight: normal
+  font-style: italic
+
+@font-face
+  font-family: 'Circular Book'
+  src: url('~/assets/fonts/CircularPro-Book.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'Circular Book'
+  src: url('~/assets/fonts/CircularPro-BookItalic.woff') format('woff')
+  font-weight: normal
+  font-style: italic
+
+@font-face
+  font-family: 'Circular Medium'
+  src: url('~/assets/fonts/CircularPro-Medium.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'Circular Medium'
+  src: url('~/assets/fonts/CircularPro-MediumItalic.woff') format('woff')
+  font-weight: normal
+  font-style: italic
+
+@font-face
+  font-family: 'Space Bold'
+  src: url('~/assets/fonts/SpaceGrotesk-Bold.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'Space Light'
+  src: url('~/assets/fonts/SpaceGrotesk-Light.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'Space Medium'
+  src: url('~/assets/fonts/SpaceGrotesk-Medium.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'Space Regular'
+  src: url('~/assets/fonts/SpaceGrotesk-Regular.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'Space SemiBold'
+  src: url('~/assets/fonts/SpaceGrotesk-SemiBold.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+
+// https://www.madebymike.com.au/writing/fluid-type-calc-examples/
+html
+  font-size: 14px
+
+@media screen and (min-width: 800px)
+  html
+    font-size: calc(14px + 4 * ((100vw - 800px) / 1400))
+
+@media screen and (min-width: 2200px)
+  html
+    font-size: 18px
+    font-family: "Circular Book", Helvetica, Arial, sans-serif
+    line-height: 1.5
+    font-weight: normal
+    font-style: normal
+
+h1, h2, h3, p, a
+  word-wrap: break-word
+  overflow-wrap: break-word
+  word-break: normal
+  hyphens: auto
+  font-size: 1rem
+
+.markdown p // No broken words in regular sized text paragraphs
+  word-wrap: normal
+  word-break: normal
+  overflow-wrap: normal
+  hyphens: none
+
+li, h1, h2, h3, h4, h5, blockquote, p, a, a:link, a:visited, a:hover, a:active, span, input, button
+  font-family: "Circular Book", Helvetica, Arial, sans-serif
+  line-height: 1.5
+  font-size: 1rem
+  font-weight: normal
+  font-style: normal
+  color: $color
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+.displayFont
+  font-family: "Clearface", Helvetica, Arial, sans-serif
+  font-weight: normal
+  li, h1, h2, h3, h4, h5, blockquote, p, a, a:link, a:visited, a:hover, a:active, span, input, button
+    font-family: "Clearface", Helvetica, Arial, sans-serif
+    font-weight: normal
+
+a
+  text-decoration: none
+  &:hover, &:active
+    text-decoration: none
+    
+.markdown
+  p, h1, h2, h3, h4, h5, blockquote
+    margin-bottom: $lineheight
+    font-size: 2rem
+    font-weight: bold
+  h3
+    font-family: "Clearface", Helvetica, Arial, sans-serif
+    font-size: 12vmin
+    line-height: 1.25
+  a
+    color: $color
+    text-decoration: underline
+    font-size: 2rem
+  strong, b
+    font-weight: bold
+  em, i
+    font-style: italic
+  blockquote, blockquote p
+    font-size: $type-size-blockquote
+  p
+    min-height: $lineheight
+    text-align: justify
+    overflow-wrap: break-word
+
+.ellipsis // Limit title to one line
+  overflow: hidden
+  min-width: 0
+  text-overflow: ellipsis
+  h1, h2, h3, p, a
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+.lineClamp // Limit excerpt to X lines
+  display: -webkit-box
+  -webkit-line-clamp: 3
+  -webkit-box-orient: vertical
+  text-overflow: ellipsis
+  overflow: hidden
+  white-space: nowrap
