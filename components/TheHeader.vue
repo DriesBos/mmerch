@@ -34,6 +34,7 @@
     </div>
     <div class="header-Nav">
       <NuxtLink to="/" class="header-Logo_Item"> home </NuxtLink>
+      <NuxtLink to="/scrolltrigger" class="header-Logo_Item">Trifecta</NuxtLink>
       <NuxtLink to="/box" class="header-Logo_Item"> 3D box </NuxtLink>
       <NuxtLink to="/scroll" class="header-Logo_Item"> 3D scroll </NuxtLink>
     </div>
