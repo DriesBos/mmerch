@@ -1,5 +1,3 @@
 <template>
-  <div class="page page-Index">
-    <TheHeader />
-  </div>
+  <div class="page page-Index"></div>
 </template>

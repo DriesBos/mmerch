@@ -17,6 +17,7 @@ import {
   MeshBasicMaterial,
   WebGLRenderer,
   Clock,
+  GridHelper,
 } from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
@@ -35,6 +36,16 @@ const aspectRatio = computed(() => width.value / height.value);
 
 // SCENE
 const scene = new Scene();
+
+// GRIDHELPER
+
+// const size = 10;
+// const divisions = 10;
+// const gridHelperBottom = new GridHelper(size, divisions);
+// const gridHelperTop = new GridHelper(size, divisions);
+// gridHelperBottom.position.y = -1;
+// gridHelperTop.position.y = 1;
+// scene.add(gridHelperBottom, gridHelperTop);
 
 // CAMERA
 const camera = new PerspectiveCamera(50, aspectRatio.value, 0.1, 2000);
