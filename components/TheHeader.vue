@@ -33,6 +33,7 @@
   font-size: 1.68rem
   text-transform: uppercase
   line-height: 1.5
+  margin-top: 2px
   &-Animation
     position: relative
     height: 100%
