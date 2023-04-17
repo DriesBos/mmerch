@@ -96,7 +96,8 @@ $width: calc(33.3333vmin - 1rem)
     background: $color-grey
     opacity: .66
   &-Btn
-    position: absolute
-    right: 1rem
-    top: 50vh
+    position: fixed
+    left: 50vw
+    transform: translateX(-50%)
+    bottom: 2rem
 </style>
