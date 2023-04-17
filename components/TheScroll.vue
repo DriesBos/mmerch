@@ -139,7 +139,11 @@ function updateRenderer() {
 
 function setRenderer() {
   if (experience.value) {
-    renderer = new WebGLRenderer({ canvas: experience.value, alpha: true });
+    renderer = new WebGLRenderer({
+      canvas: experience.value,
+      alpha: true,
+      antialias: true,
+    });
     updateRenderer();
   }
 }

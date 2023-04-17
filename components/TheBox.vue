@@ -148,10 +148,18 @@ function updateRenderer() {
 
 function setRenderer() {
   if (experience.value) {
-    renderer = new WebGLRenderer({ canvas: experience.value, alpha: true });
+    renderer = new WebGLRenderer({
+      canvas: experience.value,
+      alpha: true,
+      antialias: true,
+    });
     updateRenderer();
   }
 }
+
+// function onResize() {
+//   console.log('You resized the browser window!');
+// }
 
 // PARALLAX
 const setParallax = (event) => {
@@ -174,9 +182,16 @@ watch(aspectRatio, () => {
 onMounted(() => {
   setRenderer();
   document.addEventListener('mousemove', setParallax);
+  // document.addEventListener('resize', () => {
+  //   console.log('You resized the browser window!');
+  // });
   loop();
   tick();
   // createParticles();
+});
+
+onUnmounted(() => {
+  document.removeEventListener('mousemove', setParallax);
 });
 
 const loop = () => {
