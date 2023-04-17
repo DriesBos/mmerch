@@ -72,8 +72,10 @@ export default {
 </script>
 
 <style lang="sass">
-$height: 50vh
-$width: 33vh
+$height: 50vmin
+$width: calc(33.3333vmin - 1rem)
+@media screen and ( max-width: $breakpoint-mobile)
+  $width: 30vw
 
 .scrollTrigger
   width: 100%
