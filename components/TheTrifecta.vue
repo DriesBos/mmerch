@@ -34,6 +34,16 @@ export default {
   },
   methods: {
     animation() {
+      gsap.set('.trifecta-Card', {
+        height: '0%',
+      });
+      gsap.set('.trifecta-Card_Left', {
+        x: 0,
+      });
+      gsap.set('.trifecta-Card_Right', {
+        x: 0,
+      });
+
       gsap.to('.trifecta-Card', 1, {
         delay: 0.33,
         height: '100%',
