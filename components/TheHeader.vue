@@ -45,7 +45,6 @@
 .header, span
   display: flex
   font-family: Space Medium
-  font-size: 1.68rem
   text-transform: uppercase
   line-height: 1.5
   margin-top: 2px
@@ -58,7 +57,9 @@
     vertical-align: bottom
     display: flex
     align-items: center
-    padding: 1rem 2rem
+    padding: .5rem 1rem
+    @media screen and ( max-width: $breakpoint-mobile)
+      padding: .5rem .5rem
     span
       animation-name: textTransform
       animation-duration: 600s
@@ -73,8 +74,9 @@
     & > a
       color: black
       font-family: Space Medium
-      font-size: 1.68rem
-      padding: 1rem 1rem
+      padding: .5rem 1rem
+      @media screen and ( max-width: $breakpoint-mobile)
+      padding: .5rem .5rem
       text-decoration: none
       border-left: 2px solid black
       &.router-link-exact-active

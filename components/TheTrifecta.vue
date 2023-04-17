@@ -77,8 +77,8 @@ $width: 33vh
 
 .scrollTrigger
   width: 100%
-  height: calc(100vh - 4.5rem - 8px)
-  margin-top: calc(4.5rem + 6px)
+  height: calc(100vh - 2.5rem - 8px)
+  margin-top: calc(2.5rem + 6px)
   display: flex
   align-items: center
   justify-content: center
