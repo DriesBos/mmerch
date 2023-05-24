@@ -17,7 +17,7 @@
         class="trifecta-Card trifecta-Card_Right"
       ></div>
     </div>
-    <div class="btn trifecta-Btn" @click="animation()">Run</div>
+    <div class="btn trifecta-Btn" @click="animation()"><span>Run</span></div>
   </div>
 </template>
 
