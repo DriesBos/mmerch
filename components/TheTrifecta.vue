@@ -17,7 +17,9 @@
         class="trifecta-Card trifecta-Card_Right"
       ></div>
     </div>
-    <div class="btn trifecta-Btn" @click="animation()"><span>Run</span></div>
+    <div class="btn trifecta-Btn red" @click="animation()">
+      <span>Run</span>
+    </div>
   </div>
 </template>
 
@@ -110,4 +112,6 @@ $width: calc(33.3333vmin - 1rem)
     left: 50vw
     transform: translateX(-50%)
     bottom: 2rem
+    span
+      color: white !important
 </style>
