@@ -14,8 +14,10 @@ import {
   WebGLRenderer,
   Clock,
   GridHelper,
+  FontLoader,
 } from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
 
 import { Ref, onMounted } from 'vue';
 import { useWindowSize } from '@vueuse/core';
@@ -49,6 +51,23 @@ camera.position.set(0, 0, 0);
 scene.add(camera);
 
 // OBJECTS
+
+// Text
+
+// const textObject = new FontLoader();
+// textObject.load('fonts/helvetiker_regular.typeface.json', function (font) {
+//   const geometry = new TextGeometry('Hello three.js!', {
+//     font: font,
+//     size: 80,
+//     height: 5,
+//     curveSegments: 12,
+//     bevelEnabled: true,
+//     bevelThickness: 10,
+//     bevelSize: 8,
+//     bevelOffset: 0,
+//     bevelSegments: 5,
+//   });
+// });
 
 // => SHIBA
 const shiba = new GLTFLoader();
