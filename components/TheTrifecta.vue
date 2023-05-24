@@ -88,8 +88,8 @@ $width: calc(33.3333vmin - 1rem)
 
 .trifecta
   width: 100%
-  height: calc(100vh - 2.5rem - 8px)
-  margin-top: calc(2.5rem + 6px)
+  height: calc(100vh - 2.5rem - 10px)
+  margin-top: calc(2.5rem + 8px)
   display: flex
   align-items: center
   justify-content: center
