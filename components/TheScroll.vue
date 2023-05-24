@@ -40,7 +40,8 @@ const scene = new Scene();
 
 const size = 100;
 const divisions = 100;
-const gridHelper = new GridHelper(size, divisions);
+const color = '#0F22FD';
+const gridHelper = new GridHelper(size, divisions, color, color);
 gridHelper.position.y = -0.33;
 scene.add(gridHelper);
 
