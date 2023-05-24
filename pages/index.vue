@@ -43,9 +43,8 @@
   justify-content: flex-start
   align-items: center
   background: $color-white
-  padding: 8rem 4rem
+  padding: 12rem 4rem
   border-radius: $border-radius
-  margin-top: calc(2.5rem + 8px)
   > .section
     color: $color-red
     display: flex

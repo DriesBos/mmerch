@@ -1,53 +1,52 @@
 <template>
-  <div class="header block">
-    <div class="header-Animation">
-      <span>
-        your mmERCH playground your mmERCH playground your mmERCH playground
-        your mmERCH playground your mmERCH playground your mmERCH playground
-        your mmERCH playground your mmERCH playground your mmERCH playground
-        your mmERCH playground your mmERCH playground your mmERCH playground
-        your mmERCH playground your mmERCH playground your mmERCH playground
-        your mmERCH playground your mmERCH playground your mmERCH playground
-        your mmERCH playground your mmERCH playground your mmERCH playground
-        your mmERCH playground your mmERCH playground your mmERCH playgroundyour
-        mmERCH playground your mmERCH playground your mmERCH playground your
-        mmERCH playground your mmERCH playground your mmERCH playground your
-        mmERCH playground your mmERCH playground your mmERCH playground your
-        mmERCH playground your mmERCH playground your mmERCH playground your
-        mmERCH playground your mmERCH playground your mmERCH playground your
-        mmERCH playground your mmERCH playground your mmERCH playground your
-        mmERCH playground your mmERCH playground your mmERCH playground your
-        mmERCH playground your mmERCH playground your mmERCH playground your
-        mmERCH playground your mmERCH playground your mmERCH playground your
-        mmERCH playground your mmERCH playground your mmERCH playground your
-        mmERCH playground your mmERCH playground your mmERCH playground your
-        mmERCH playground your mmERCH playground your mmERCH playground your
-        mmERCH playground your mmERCH playground your mmERCH playground your
-        mmERCH playground your mmERCH playground your mmERCH playgroundyour
-        mmERCH playground your mmERCH playground your mmERCH playground your
-        mmERCH playground your mmERCH playground your mmERCH playground your
-        mmERCH playground your mmERCH playground your mmERCH playground your
-        mmERCH playground your mmERCH playground your mmERCH playground your
-        mmERCH playground your mmERCH playground your mmERCH playground your
-        mmERCH playground your mmERCH playground your mmERCH playground
-      </span>
+  <header>
+    <div class="header">
+      <div class="header-Animation">
+        <span>
+          your mmERCH playground your mmERCH playground your mmERCH playground
+          your mmERCH playground your mmERCH playground your mmERCH playground
+          your mmERCH playground your mmERCH playground your mmERCH playground
+          your mmERCH playground your mmERCH playground your mmERCH playground
+          your mmERCH playground your mmERCH playground your mmERCH playground
+          your mmERCH playground your mmERCH playground your mmERCH playground
+          your mmERCH playground your mmERCH playground your mmERCH playground
+          your mmERCH playground your mmERCH playground your mmERCH
+          playgroundyour mmERCH playground your mmERCH playground your mmERCH
+          playground your mmERCH playground your mmERCH playground your mmERCH
+          playground your mmERCH playground your mmERCH playground your mmERCH
+          playground your mmERCH playground your mmERCH playground your mmERCH
+          playground your mmERCH playground your mmERCH playground your mmERCH
+          playground your mmERCH playground your mmERCH playground your mmERCH
+          playground your mmERCH playground your mmERCH playground your mmERCH
+          playground your mmERCH playground your mmERCH playground your mmERCH
+          playground your mmERCH playground your mmERCH playground your mmERCH
+          playground your mmERCH playground your mmERCH playground your mmERCH
+          playground your mmERCH playground your mmERCH playground your mmERCH
+          playground your mmERCH playground your mmERCH playground your mmERCH
+          playground your mmERCH playground your mmERCH playground your mmERCH
+          playground your mmERCH playground your mmERCH playground your mmERCH
+          playgroundyour mmERCH playground your mmERCH playground your mmERCH
+          playground your mmERCH playground your mmERCH playground your mmERCH
+          playground your mmERCH playground your mmERCH playground your mmERCH
+          playground your mmERCH playground your mmERCH playground your mmERCH
+          playground your mmERCH playground your mmERCH playground your mmERCH
+          playground your mmERCH playground your mmERCH playground your mmERCH
+          playground
+        </span>
+      </div>
+      <div class="header-Nav">
+        <NuxtLink to="/" class="header-Logo_Item"> home </NuxtLink>
+        <NuxtLink to="/trifecta" class="header-Logo_Item">Trifecta</NuxtLink>
+        <NuxtLink to="/box" class="header-Logo_Item"> 3D box </NuxtLink>
+        <NuxtLink to="/scroll" class="header-Logo_Item"> 3D scroll </NuxtLink>
+      </div>
     </div>
-    <div class="header-Nav">
-      <NuxtLink to="/" class="header-Logo_Item"> home </NuxtLink>
-      <NuxtLink to="/trifecta" class="header-Logo_Item">Trifecta</NuxtLink>
-      <NuxtLink to="/box" class="header-Logo_Item"> 3D box </NuxtLink>
-      <NuxtLink to="/scroll" class="header-Logo_Item"> 3D scroll </NuxtLink>
-    </div>
-  </div>
+  </header>
 </template>
 
 <style lang="sass">
 .header, span
   display: flex
-  font-family: Space Medium
-  text-transform: uppercase
-  line-height: 1.5
-  margin-top: 2px
   &-Animation
     position: relative
     height: 100%
@@ -57,9 +56,9 @@
     vertical-align: bottom
     display: flex
     align-items: center
-    padding: .5rem 1rem
+    padding: 1rem 1rem
     @media screen and ( max-width: $breakpoint-mobile)
-      padding: .5rem .5rem
+      padding: 1rem .5rem
     span
       animation-name: textTransform
       animation-duration: 600s
@@ -71,17 +70,18 @@
   &-Nav
     display: flex
     flex-shrink: 0
+    border-left: 2px solid currentColor
     & > a
       color: black
       font-family: Space Medium
-      padding: .5rem 1rem
-      @media screen and ( max-width: $breakpoint-mobile)
-      padding: .5rem .5rem
+      padding: 1rem 1rem
       text-decoration: none
-      border-left: 2px solid black
+      @media screen and ( max-width: $breakpoint-mobile)
+        padding: 1rem .5rem
       &.router-link-exact-active
-        color: white !important
-        background: $color-red
+        // color: white !important
+        // background: black
+        text-decoration: underline
 
 @keyframes textTransform
   from

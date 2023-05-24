@@ -13,24 +13,38 @@ html
   width: 100%
   min-height: 100vh
 
-.header
+header
   position: fixed
-  left: 0
+  left: 50%
   top: 0
-  right: 0
+  transform: translateX(-50%)
   width: 100%
+  max-width: calc(1440px + 2rem)
   z-index: +1
-  border: 2px solid black
+  padding: 1rem 1rem 0 1rem
+  margin-left: auto
+  margin-right: auto
+
+.header
+  position: relative
+  border: $border-width solid currentColor
+  background: $color-white
+  color: black
+  text-transform: none
+  font-family: Space SemiBold
+  font-size: 1.33rem
+  line-height: 1
+  border-radius: $border-radius
 
 .webgl
   position: fixed
   left: 0
-  top: calc(2.5rem + 8px)
+  top: 0
   right: 0
   background: $bg-block
   border-radius: $border-radius
   flex-grow: 1
-  height: calc(100vh - 2.5rem - 10px)
+  height: 100vh
 
 .block
   background: $bg-block
