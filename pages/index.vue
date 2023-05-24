@@ -3,17 +3,34 @@
     <div class="content">
       <div class="section">
         <h2 class="subtitle">Drop 1 // GENESIS COLLECTION</h2>
-        <h1>
+        <h1 class="title">
           Our first drop is in collaboration with the legendary, multi-award
           winning comic book artist, Gilbert Hernández.
         </h1>
+        <div class="btn-Container">
+          <div class="btn red"><span>Let's connect</span></div>
+        </div>
       </div>
-      <div class="section">
+      <div class="section green">
         <h2 class="subtitle">Drop 1 // GENESIS COLLECTION</h2>
-        <h1>
+        <h1 class="title">
           Our first drop is in collaboration with the legendary, multi-award
           winning comic book artist, Gilbert Hernández.
         </h1>
+        <div class="btn-Container">
+          <div class="btn green"><span>Let's connect</span></div>
+        </div>
+      </div>
+
+      <div class="section blue">
+        <h2 class="subtitle">Drop 1 // GENESIS COLLECTION</h2>
+        <h1 class="title">
+          Our first drop is in collaboration with the legendary, multi-award
+          winning comic book artist, Gilbert Hernández.
+        </h1>
+        <div class="btn-Container">
+          <div class="btn blue"><span>Let's connect</span></div>
+        </div>
       </div>
     </div>
   </div>
@@ -30,17 +47,19 @@
   border-radius: $border-radius
   margin-top: calc(2.5rem + 8px)
   > .section
+    color: $color-red
     display: flex
     flex-direction: column
     justify-content: flex-start
     align-items: flex-start
-    border: .45rem solid $color-red
+    border: $border-width solid currentColor
     width: 100%
     max-width: 1440px
-    padding: 2rem
-    padding-top: 4rem
+    padding: 4rem 2rem
     border-radius: 2rem 2rem 1rem 1rem
     margin-bottom: 4rem
     > .subtitle
       margin-bottom: 1rem
+    > .title
+      margin-bottom: 4rem
 </style>
