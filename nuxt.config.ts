@@ -5,7 +5,6 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
-      viewport: 'width=device-width, initial-scale=1.0, viewport-fit=cover',
       title: 'mmERCH playground',
       htmlAttrs: {
         lang: 'en',
@@ -14,7 +13,12 @@ export default defineNuxtConfig({
         { name: 'description', content: 'content' },
         {
           name: 'viewport',
-          content: 'width=device-width, initial-scale=1.0, viewport-fit=cover',
+          content: 'width=device-width, initial-scale=1, viewport-fit=cover',
+        },
+        { name: 'apple-mobile-web-app-capable', content: 'yes' },
+        {
+          name: 'apple-mobile-web-app-status-bar-style',
+          content: 'black-translucent',
         },
       ],
     },
