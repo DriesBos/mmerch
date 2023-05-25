@@ -10,7 +10,13 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en',
       },
-      meta: [{ name: 'description', content: 'content' }],
+      meta: [
+        { name: 'description', content: 'content' },
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1.0, viewport-fit=cover',
+        },
+      ],
     },
   },
 
