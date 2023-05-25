@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
-      viewport: 'width=device-width, initial-scale=1',
+      viewport: 'width=device-width, initial-scale=1.0, viewport-fit=cover',
       title: 'mmERCH playground',
       htmlAttrs: {
         lang: 'en',
