@@ -200,19 +200,3 @@ const loop = () => {
   requestAnimationFrame(loop);
 };
 </script>
-
-<style lang="sass">
-
-// .shiba
-//   position: fixed
-//   left: 2rem
-//   top: 1rem
-//   color: white
-//   text-transform: uppercase
-//   padding: .5rem 1rem
-//   text-decoration: none
-//   background: grey
-//   cursor: pointer
-//   &:hover
-//     background: green
-</style>
