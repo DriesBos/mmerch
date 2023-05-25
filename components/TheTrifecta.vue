@@ -112,6 +112,4 @@ $width: calc(33.3333vmin - 1rem)
     left: 50vw
     transform: translateX(-50%)
     bottom: 2rem
-    span
-      color: white !important
 </style>
