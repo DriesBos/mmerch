@@ -44,6 +44,8 @@
   align-items: center
   background: $color-white
   padding: 12rem 4rem
+  @media screen and ( max-width: $breakpoint-mobile)
+    padding: 12rem 2rem
   border-radius: $border-radius
   > .section
     color: $color-red
@@ -57,6 +59,8 @@
     padding: 4rem 2rem
     border-radius: 2rem 2rem 1rem 1rem
     margin-bottom: 4rem
+    @media screen and ( max-width: $breakpoint-mobile)
+      padding: 4rem 1rem
     > .subtitle
       margin-bottom: 1rem
     > .title
