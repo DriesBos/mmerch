@@ -12,9 +12,9 @@
           <PrevNext class="zoom">Zoom</PrevNext>
         </div>
         <div class="btn-Container btn-Container_Vertical">
-          <Btn class="black">Static</Btn>
           <Btn class="blue">Static</Btn>
           <Btn class="green">Static</Btn>
+          <Btn class="black">Static</Btn>
           <Btn class="black smooth">Smooth</Btn>
           <Btn class="black zoom">Zoom</Btn>
           <Btn class="black interactBtn">Sticky</Btn>
@@ -65,12 +65,11 @@ export default {
   },
   methods: {
     goStagger() {
-      gsap.to('.sectionStagger', 1, {
+      gsap.to('.sectionStagger', 0.5, {
         opacity: 1,
         scale: 1,
-        ease: 'ease',
-        delay: 0.165,
-        stagger: 0.05,
+        ease: 'sine.in',
+        stagger: 0.1,
       });
     },
   },
@@ -80,7 +79,7 @@ export default {
 <style lang="sass" scoped>
 .sectionStagger
   opacity: 0
-  scale: 0.99
+  scale: 0.995
 .content
   display: flex
   flex-direction: column
