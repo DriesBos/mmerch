@@ -2,6 +2,7 @@
   <div class="page page-Index">
     <div class="content">
       <div class="section">
+        <PrevNext />
         <div class="btn-Container btn-Container_Vertical">
           <Btn class="black">I'm static</Btn>
           <Btn class="blue">I'm static</Btn>
@@ -80,6 +81,10 @@ definePageMeta({
     margin-bottom: 4rem
     @media screen and ( max-width: $breakpoint-mobile)
       padding: 4rem 1rem
+    > div
+      margin-bottom: 4rem
+      &:last-child
+        margin-bottom: 0
     > .subtitle
       margin-bottom: 1rem
     > .title

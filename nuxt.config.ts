@@ -24,6 +24,12 @@ export default defineNuxtConfig({
     },
   },
 
+  modules: ['nuxt-svgo'],
+  svgo: {
+    defaultImport: 'component',
+    autoImportPath: './assets/icons/',
+  },
+
   vite: {
     css: {
       preprocessorOptions: {

@@ -12,6 +12,16 @@ export default {
       .forEach((item) =>
         item.addEventListener('mouseleave', this.isLeavingBtn)
       );
+    document
+      .querySelectorAll('.interactArrow')
+      .forEach((item) =>
+        item.addEventListener('mouseenter', this.isHoveringArrow)
+      );
+    document
+      .querySelectorAll('.interactArrow')
+      .forEach((item) =>
+        item.addEventListener('mouseleave', this.isLeavingArrow)
+      );
     // document
     //   .querySelectorAll('.interactMenu')
     //   .forEach((item) =>
@@ -50,6 +60,22 @@ export default {
         duration: 0.165,
         scale: 1,
         ease: 'back.in',
+      });
+    },
+    isHoveringArrow(event) {
+      gsap.to(event.target, {
+        duration: 1,
+        scale: 1.1,
+        x: '50%',
+        ease: 'ease',
+      });
+    },
+    isLeavingArrow(event) {
+      gsap.to(event.target, {
+        duration: 1,
+        scale: 1,
+        x: 0,
+        ease: 'ease',
       });
     },
   },

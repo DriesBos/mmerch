@@ -15,6 +15,8 @@ export default {
 </script>
 
 <style lang="sass">
+$transition-btn: .165s
+
 .btn
   color: black
   border: $border-width solid currentColor
@@ -34,13 +36,10 @@ export default {
     @media (pointer: fine)
       background: currentColor
 
-// Transitions
-$transition-duration: .165s
-
 .smooth
-  transition: border $transition-duration ease-in-out, background $transition-duration ease-in-out
+  transition: border $transition-btn ease-in-out, background $transition-btn ease-in-out
   span
-    transition: color $transition-duration ease-in-out
+    transition: color $transition-btn ease-in-out
 
 .interactEnlarge
   transition: border .33s ease-in-out, background .33s ease-in-out
