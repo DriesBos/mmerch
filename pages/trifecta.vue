@@ -4,6 +4,12 @@
   </div>
 </template>
 
+<script setup>
+definePageMeta({
+  title: 'mmERCH playground — trifecta',
+});
+</script>
+
 <style lang="sass">
 .page
   &-ScrollTrigger

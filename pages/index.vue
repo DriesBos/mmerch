@@ -1,6 +1,7 @@
 <template>
   <div class="page page-Index">
     <div class="content">
+      <div class="section"></div>
       <div class="section">
         <h2 class="subtitle">Drop 1 // GENESIS COLLECTION</h2>
         <h1 class="title">
@@ -35,6 +36,12 @@
     </div>
   </div>
 </template>
+
+<script setup>
+definePageMeta({
+  title: 'mmERCH playground — home',
+});
+</script>
 
 <style lang="sass" scoped>
 .content

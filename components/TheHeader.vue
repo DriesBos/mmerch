@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="header">
-      <div class="header-Animation">
+      <div class="header-Animation fadeInStaggered">
         <span>
           your mmERCH playground your mmERCH playground your mmERCH playground
           your mmERCH playground your mmERCH playground your mmERCH playground
@@ -35,14 +35,64 @@
         </span>
       </div>
       <div class="header-Nav">
-        <NuxtLink to="/" class="header-Logo_Item"> home </NuxtLink>
-        <NuxtLink to="/trifecta" class="header-Logo_Item">Trifecta</NuxtLink>
-        <NuxtLink to="/box" class="header-Logo_Item"> 3D box </NuxtLink>
-        <NuxtLink to="/scroll" class="header-Logo_Item"> 3D scroll </NuxtLink>
+        <NuxtLink
+          to="/"
+          class="header-Logo_Item interactEnlarge fadeInStaggered"
+        >
+          home
+        </NuxtLink>
+        <NuxtLink
+          to="/trifecta"
+          class="header-Logo_Item interactEnlarge fadeInStaggered"
+          >Trifecta</NuxtLink
+        >
+        <NuxtLink
+          to="/box"
+          class="header-Logo_Item interactEnlarge fadeInStaggered"
+        >
+          3D box
+        </NuxtLink>
+        <NuxtLink
+          to="/scroll"
+          class="header-Logo_Item interactEnlarge fadeInStaggered"
+        >
+          3D scroll
+        </NuxtLink>
       </div>
     </div>
   </header>
 </template>
+
+<script>
+import gsap from 'gsap';
+
+export default {
+  mounted() {
+    document
+      .querySelectorAll('.interactEnlarge')
+      .forEach((item) => item.addEventListener('mouseenter', this.isHovering));
+    document
+      .querySelectorAll('.interactEnlarge')
+      .forEach((item) => item.addEventListener('mouseleave', this.isLeaving));
+  },
+  methods: {
+    isHovering(event) {
+      gsap.to(event.target, {
+        duration: 0.33,
+        scale: 1.1,
+        ease: 'back',
+      });
+    },
+    isLeaving(event) {
+      gsap.to(event.target, {
+        duration: 0.33,
+        scale: 1,
+        ease: 'back',
+      });
+    },
+  },
+};
+</script>
 
 <style lang="sass">
 .header, span
@@ -56,7 +106,7 @@
     vertical-align: bottom
     display: flex
     align-items: center
-    padding: 1rem 1rem
+    padding: $spacing-two $spacing-one
     @media screen and ( max-width: $breakpoint-mobile)
       padding: 1rem .5rem
     span
@@ -70,18 +120,17 @@
   &-Nav
     display: flex
     flex-shrink: 0
-    border-left: 2px solid currentColor
+    border-left: $border-width solid $color
+    padding: 0 $spacing-one
     & > a
       color: black
       font-family: Space Medium
-      padding: 1rem 1rem
+      text-transform: lowercase
+      padding: $spacing-two $spacing-one
       text-decoration: none
       @media screen and ( max-width: $breakpoint-mobile)
         padding: 1rem .5rem
-      &.router-link-exact-active
-        // color: white !important
-        // background: black
-        text-decoration: underline
+      // &.router-link-exact-active
 
 @keyframes textTransform
   from

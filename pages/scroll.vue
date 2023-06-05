@@ -4,6 +4,12 @@
   </div>
 </template>
 
+<script setup>
+definePageMeta({
+  title: 'mmERCH playground — 3D scroll',
+});
+</script>
+
 <style lang="sass">
 .page
   &-Scroll
