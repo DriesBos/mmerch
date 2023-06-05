@@ -45,15 +45,16 @@ export default {
   position: fixed
   width: 6rem
   height: 4rem
-  transform: translate(-50%, -50%)
+  transform: translate(-50%, -70%)
   border-radius: $border-radius
   z-index: 999
   pointer-events: none
   opacity: 0
   background: $color-red
+  transition: opacity .1s ease-in-out
   span
     position: absolute
-    top: calc(50% - .5em)
+    top: calc(50%)
     left: 50%
     transform: translate(-50%, -50%)
     white-space: nowrap
