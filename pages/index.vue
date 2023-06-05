@@ -6,6 +6,12 @@
           <Btn class="black">let's connect</Btn>
           <Btn class="blue">let's connect</Btn>
           <Btn class="green">let's connect</Btn>
+          <Btn class="black smooth">let's connect</Btn>
+          <Btn class="blue smooth">let's connect</Btn>
+          <Btn class="green smooth">let's connect</Btn>
+          <Btn class="black interactEnlarge">let's connect</Btn>
+          <Btn class="blue interactEnlarge">let's connect</Btn>
+          <Btn class="green interactEnlarge">let's connect</Btn>
         </div>
       </div>
       <div class="section">

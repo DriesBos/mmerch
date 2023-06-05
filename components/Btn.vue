@@ -6,6 +6,14 @@
   </div>
 </template>
 
+<script>
+import hoverAnimations from '@/mixins/hoverAnimations';
+
+export default {
+  mixins: [hoverAnimations],
+};
+</script>
+
 <style lang="sass">
 .btn
   color: black
@@ -25,6 +33,19 @@
     background: currentColor
     @media (pointer: fine)
       background: currentColor
+
+// Transitions
+$transition-duration: .165s
+
+.smooth
+  transition: border $transition-duration ease-in-out, background $transition-duration ease-in-out
+  span
+    transition: color $transition-duration ease-in-out
+
+.interactEnlarge
+  transition: border .33s ease-in-out, background .33s ease-in-out
+  span
+    transition: color .33s ease-in-out
 
 // Colors
 .black
