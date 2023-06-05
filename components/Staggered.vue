@@ -1,6 +1,6 @@
 <template>
   <div class="staggered">
-    <div class="item staggerItem"></div>
+    <div @click="goStagger()" class="item staggerItem"></div>
     <div class="item staggerItem"></div>
     <div class="item staggerItem"></div>
     <!-- <div class="item"></div> -->
@@ -16,13 +16,16 @@ export default {
   },
   methods: {
     goStagger() {
-      gsap.to('.staggerItem', 1, {
-        opacity: 1,
-        scale: 1,
-        ease: 'ease',
-        delay: 0.165,
-        stagger: 0.05,
-      });
+      gsap.set('.staggerItem', {
+        opacity: 0,
+        scale: 0.99,
+      }),
+        gsap.to('.staggerItem', 0.5, {
+          opacity: 1,
+          scale: 1,
+          ease: 'sine.in',
+          stagger: 0.1,
+        });
     },
   },
 };
@@ -42,6 +45,7 @@ export default {
     border-radius: $border-radius
     opacity: 0
     scale: 0.99
+    cursor: pointer
     &:first-child
       margin-left: 0
     &:last-child
