@@ -1,7 +1,7 @@
 <template>
   <div class="page page-Index">
     <div class="content">
-      <div class="section">
+      <div class="section green">
         <Nav class="zoom" />
       </div>
       <div class="section">
