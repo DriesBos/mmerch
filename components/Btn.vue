@@ -67,14 +67,14 @@ $trans-btn: $trans-hover
     &:hover
       scale: 1.02
 
-  &.zoomOne
+  &.zoomTwo
     transition: border $trans-btn, background $trans-btn, scale $trans-btn
     span
       transition: color $trans-btn
     &:hover
       scale: 1.04
 
-  &.zoomTwo
+  &.zoomThree
     transition: border $trans-btn, background $trans-btn, scale $trans-btn
     span
       transition: color $trans-btn
