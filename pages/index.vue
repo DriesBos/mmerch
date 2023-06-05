@@ -2,6 +2,9 @@
   <div class="page page-Index">
     <div class="content">
       <div class="section">
+        <Nav class="zoom" />
+      </div>
+      <div class="section">
         <div class="btn-Container btn-Container_Vertical">
           <PrevNext class="static">Static</PrevNext>
           <PrevNext class="smooth">Smooth</PrevNext>
@@ -24,7 +27,7 @@
           winning comic book artist, Gilbert Hernández.
         </h1>
         <div class="btn-Container">
-          <div class="btn red"><span>Let's connect</span></div>
+          <Btn class="black zoom">Let's connect</Btn>
         </div>
       </div>
       <div class="section green">
@@ -34,7 +37,7 @@
           winning comic book artist, Gilbert Hernández.
         </h1>
         <div class="btn-Container">
-          <div class="btn green"><span>Let's connect</span></div>
+          <Btn class="green zoom">Let's connect</Btn>
         </div>
       </div>
 
@@ -45,7 +48,7 @@
           winning comic book artist, Gilbert Hernández.
         </h1>
         <div class="btn-Container">
-          <div class="btn blue"><span>Let's connect</span></div>
+          <Btn class="blue zoom">Let's connect</Btn>
         </div>
       </div>
     </div>
@@ -86,6 +89,13 @@ definePageMeta({
     &.blue
       border-color: $color-blue
       min-height: 50vmin
+    &.green
+      border-color: $color-green
+    &.zoom
+      scale: 1
+      transition: scale $trans-hover
+      &:hover
+        scale: 1.005
     > div
       margin-bottom: 4rem
       &:last-child
