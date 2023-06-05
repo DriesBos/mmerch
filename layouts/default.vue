@@ -56,7 +56,7 @@ export default {
           left: e.clientX,
           top: e.clientY,
           ease: 'ease',
-          delay: 0.05,
+          // delay: 0.05,
         });
       }
       document.addEventListener('mousemove', moveCursor);
