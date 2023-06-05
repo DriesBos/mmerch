@@ -9,9 +9,9 @@
           <Btn class="black smooth">I'm smooth</Btn>
           <Btn class="blue smooth">I'm smooth</Btn>
           <Btn class="green smooth">I'm smooth</Btn>
-          <Btn class="black interactBtn">I'm zoomed</Btn>
-          <Btn class="blue interactBtn">I'm zoomed</Btn>
-          <Btn class="green interactBtn">I'm zoomed</Btn>
+          <Btn class="black interactBtn">I'm scaling</Btn>
+          <Btn class="blue interactBtn">I'm scaling</Btn>
+          <Btn class="green interactBtn">I'm scaling</Btn>
         </div>
       </div>
       <div class="section">
