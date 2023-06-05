@@ -48,41 +48,14 @@ header
   flex-grow: 1
   height: 100vh
 
-// .block
-//   background: $bg-block
-//   border-radius: $border-radius
-//   overflow: hidden
-
 .btn-Container
   width: 100%
   display: flex
   justify-content: center
-
-.btn
-  color: black
-  border: $border-width solid currentColor
-  padding: 1rem 4rem
-  border-radius: $border-radius
-  cursor: pointer
-  letter-spacing: 1.5%
-  white-space: nowrap
-  // transition: background .1s ease-in
-  span
-    color: black
-    text-transform: none
-    font-family: Space SemiBold
-    font-size: 1.33rem
-    line-height: 1
-  &:hover
-    @media (pointer: fine) 
-      background: currentColor
-
-// Colors
-.red
-  color: $color-red !important
-
-.green
-  color: $color-green !important
-
-.blue
-  color: $color-blue !important
+  &_Vertical
+    flex-direction: column
+    align-items: center
+    & > div 
+      margin-bottom: 2rem
+      &:last-child
+        margin-bottom: 0

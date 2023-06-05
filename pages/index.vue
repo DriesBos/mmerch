@@ -1,7 +1,13 @@
 <template>
   <div class="page page-Index">
     <div class="content">
-      <div class="section"></div>
+      <div class="section">
+        <div class="btn-Container btn-Container_Vertical">
+          <Btn class="black">let's connect</Btn>
+          <Btn class="blue">let's connect</Btn>
+          <Btn class="green">let's connect</Btn>
+        </div>
+      </div>
       <div class="section">
         <h2 class="subtitle">Drop 1 // GENESIS COLLECTION</h2>
         <h1 class="title">
