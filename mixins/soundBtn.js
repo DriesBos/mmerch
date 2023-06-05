@@ -11,8 +11,11 @@ export default {
       .forEach((item) =>
         item.addEventListener('mouseleave', this.removeChangeCursor)
       );
+    document
+      .querySelectorAll('.soundBtn')
+      .forEach((item) => item.addEventListener('mouseup', this.changeMute));
   },
-  destroyed() {
+  unmounted() {
     this.removeChangeCursor();
     document
       .querySelectorAll('.soundBtn')
@@ -24,6 +27,9 @@ export default {
       .forEach((item) =>
         item.removeEventListener('mouseleave', this.removeChangeCursor)
       );
+    document
+      .querySelectorAll('.soundBtn')
+      .forEach((item) => item.removeEventListener('mouseup', this.changeMute));
   },
   methods: {
     customCursor() {
@@ -43,6 +49,14 @@ export default {
     },
     removeChangeCursor() {
       document.querySelector('.cursor').classList.remove('active');
+    },
+    changeMute() {
+      this.muted = !this.muted;
+      if (this.muted) {
+        document.querySelector('.cursor').classList.remove('muted');
+      } else {
+        document.querySelector('.cursor').classList.add('muted');
+      }
     },
   },
 };

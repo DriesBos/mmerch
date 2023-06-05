@@ -1,10 +1,11 @@
 <template>
   <div class="page page-Index">
     <div class="content">
-      <div class="section green">
+      <Staggered />
+      <div class="section sectionStagger green">
         <Nav class="zoom" />
       </div>
-      <div class="section">
+      <div class="section sectionStagger">
         <div class="btn-Container btn-Container_Vertical">
           <PrevNext class="static">Static</PrevNext>
           <PrevNext class="smooth">Smooth</PrevNext>
@@ -20,7 +21,7 @@
         </div>
       </div>
       <SoundBtn class="blue" />
-      <div class="section">
+      <div class="section sectionStagger">
         <h2 class="subtitle">Drop 1 // GENESIS COLLECTION</h2>
         <h1 class="title">
           Our first drop is in collaboration with the legendary, multi-award
@@ -30,7 +31,7 @@
           <Btn class="black zoom">Let's connect</Btn>
         </div>
       </div>
-      <div class="section green">
+      <div class="section sectionStagger green">
         <h2 class="subtitle">Drop 1 // GENESIS COLLECTION</h2>
         <h1 class="title">
           Our first drop is in collaboration with the legendary, multi-award
@@ -41,7 +42,7 @@
         </div>
       </div>
 
-      <div class="section blue">
+      <div class="section sectionStagger blue">
         <h2 class="subtitle">Drop 1 // GENESIS COLLECTION</h2>
         <h1 class="title">
           Our first drop is in collaboration with the legendary, multi-award
@@ -55,13 +56,31 @@
   </div>
 </template>
 
-<script setup>
-definePageMeta({
-  title: 'mmERCH playground — home',
-});
+<script>
+import { gsap } from 'gsap';
+
+export default {
+  mounted() {
+    this.goStagger();
+  },
+  methods: {
+    goStagger() {
+      gsap.to('.sectionStagger', 1, {
+        opacity: 1,
+        scale: 1,
+        ease: 'ease',
+        delay: 0.165,
+        stagger: 0.05,
+      });
+    },
+  },
+};
 </script>
 
 <style lang="sass" scoped>
+.sectionStagger
+  opacity: 0
+  scale: 0.99
 .content
   display: flex
   flex-direction: column
@@ -89,6 +108,7 @@ definePageMeta({
     &.blue
       border-color: $color-blue
       min-height: 50vmin
+      scale: 1
     &.green
       border-color: $color-green
     &.zoom

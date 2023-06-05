@@ -1,33 +1,68 @@
 <template>
-  <div class="section soundBtn">
-    <div class="cursor">
-      <span v-if="muted">sound off</span>
-      <span v-else>sound on</span>
-    </div>
-  </div>
+  <div class="section soundBtn"></div>
 </template>
 
-<script>
-import SoundBtn from '@/mixins/soundBtn';
+<!-- <script>
+import { gsap } from 'gsap';
+// import SoundBtn from '@/mixins/soundBtn';
 
 export default {
-  mixins: [SoundBtn],
+  // mixins: [SoundBtn],
   data() {
     return {
       muted: true,
     };
   },
   mounted() {
+    this.customCursor();
+    document
+      .querySelectorAll('.soundBtn')
+      .forEach((item) => item.addEventListener('mouseover', this.changeCursor));
+    document
+      .querySelectorAll('.soundBtn')
+      .forEach((item) =>
+        item.addEventListener('mouseleave', this.removeChangeCursor)
+      );
     document
       .querySelectorAll('.soundBtn')
       .forEach((item) => item.addEventListener('mouseup', this.changeMute));
   },
   unmounted() {
+    this.removeChangeCursor();
+    document
+      .querySelectorAll('.soundBtn')
+      .forEach((item) =>
+        item.removeEventListener('mouseover', this.changeCursor)
+      );
+    document
+      .querySelectorAll('.soundBtn')
+      .forEach((item) =>
+        item.removeEventListener('mouseleave', this.removeChangeCursor)
+      );
     document
       .querySelectorAll('.soundBtn')
       .forEach((item) => item.removeEventListener('mouseup', this.changeMute));
   },
   methods: {
+    customCursor() {
+      const cursor = document.querySelector('.cursor');
+      function moveCursor(e) {
+        console.log(e);
+        gsap.to(cursor, 0.165, {
+          left: e.clientX,
+          top: e.clientY,
+          ease: 'ease',
+          delay: 0.05,
+        });
+      }
+      document.addEventListener('mousemove', moveCursor);
+    },
+    changeCursor() {
+      document.querySelector('.cursor').classList.add('active');
+    },
+    removeChangeCursor() {
+      document.querySelector('.cursor').classList.remove('active');
+    },
     changeMute() {
       this.muted = !this.muted;
       if (this.muted) {
@@ -38,14 +73,14 @@ export default {
     },
   },
 };
-</script>
+</script> -->
 
 <style lang="sass">
 .cursor
   position: fixed
   width: 6rem
   height: 2rem
-  transform: translate(-50%, -70%)
+  transform: translate(-50%, -50%)
   border-radius: 1000px
   z-index: 999
   pointer-events: none
