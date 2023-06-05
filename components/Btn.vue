@@ -36,30 +36,31 @@ $transition-btn: .165s
     @media (pointer: fine)
       background: currentColor
 
-.smooth
-  transition: border $transition-btn ease-in-out, background $transition-btn ease-in-out
-  span
-    transition: color $transition-btn ease-in-out
-
-.interactEnlarge
-  transition: border .33s ease-in-out, background .33s ease-in-out
-  span
-    transition: color .33s ease-in-out
-
-// Colors
-.black
-  &:hover
-    background: $color-red
-  span
-    color: $color
+  // Colors
+  &.black
     &:hover
-      background: transparent
+      background: $color-red
+    span
+      color: $color
+      &:hover
+        background: transparent
 
-.green
-  color: $color-green
 
-.blue
-  color: $color-blue
-  &:hover > span
-      color: white
+  &.green
+    color: $color-green
+
+  &.blue
+    color: $color-blue
+    &:hover > span
+        color: white
+
+  &.smooth
+    transition: border $transition-btn ease-in-out, background $transition-btn ease-in-out
+    span
+      transition: color $transition-btn ease-in-out
+
+  &.interactBtn
+    transition: border .33s ease-in-out, background .33s ease-in-out
+    span
+      transition: color .33s ease-in-out
 </style>
