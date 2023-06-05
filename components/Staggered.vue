@@ -1,8 +1,8 @@
 <template>
   <div class="staggered">
-    <div @click="goStagger()" class="item staggerItem"></div>
-    <div class="item staggerItem"></div>
-    <div class="item staggerItem"></div>
+    <div class="item staggerItem" @click="goStagger()"></div>
+    <div class="item staggerItem" @click="goStagger()"></div>
+    <div class="item staggerItem" @click="goStagger()"></div>
     <!-- <div class="item"></div> -->
   </div>
 </template>
