@@ -79,7 +79,7 @@ $trans-btn: $trans-hover
     span
       transition: color $trans-btn
     &:hover
-      scale: 1.06
+      scale: 1.01
 
   &.interactBtn
     transition: border $trans-btn, background $trans-btn

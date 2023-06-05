@@ -17,8 +17,8 @@
           <Btn class="black">Static</Btn>
           <Btn class="black smooth">Smooth</Btn>
           <Btn class="black zoom">Zoom</Btn>
-          <Btn class="black zoomTwo">Zoom</Btn>
-          <Btn class="black zoomThree">Zoom</Btn>
+          <Btn class="black zoomTwo">Zoom two</Btn>
+          <Btn class="black zoomThree">Zoom three</Btn>
           <Btn class="black interactBtn">Sticky</Btn>
         </div>
       </div>
