@@ -3,15 +3,15 @@
     <div class="content">
       <div class="section">
         <div class="btn-Container btn-Container_Vertical">
-          <Btn class="black">let's connect</Btn>
-          <Btn class="blue">let's connect</Btn>
-          <Btn class="green">let's connect</Btn>
-          <Btn class="black smooth">let's connect</Btn>
-          <Btn class="blue smooth">let's connect</Btn>
-          <Btn class="green smooth">let's connect</Btn>
-          <Btn class="black interactEnlarge">let's connect</Btn>
-          <Btn class="blue interactEnlarge">let's connect</Btn>
-          <Btn class="green interactEnlarge">let's connect</Btn>
+          <Btn class="black">I'm static</Btn>
+          <Btn class="blue">I'm static</Btn>
+          <Btn class="green">I'm static</Btn>
+          <Btn class="black smooth">I'm smooth</Btn>
+          <Btn class="blue smooth">I'm smooth</Btn>
+          <Btn class="green smooth">I'm smooth</Btn>
+          <Btn class="black interactBtn">I'm zoomed</Btn>
+          <Btn class="blue interactBtn">I'm zoomed</Btn>
+          <Btn class="green interactBtn">I'm zoomed</Btn>
         </div>
       </div>
       <div class="section">

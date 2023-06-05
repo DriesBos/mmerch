@@ -35,26 +35,23 @@
         </span>
       </div>
       <div class="header-Nav">
-        <NuxtLink
-          to="/"
-          class="header-Logo_Item interactEnlarge fadeInStaggered"
-        >
+        <NuxtLink to="/" class="header-Logo_Item interactMenu fadeInStaggered">
           home
         </NuxtLink>
         <NuxtLink
           to="/trifecta"
-          class="header-Logo_Item interactEnlarge fadeInStaggered"
+          class="header-Logo_Item interactMenu fadeInStaggered"
           >Trifecta</NuxtLink
         >
         <NuxtLink
           to="/box"
-          class="header-Logo_Item interactEnlarge fadeInStaggered"
+          class="header-Logo_Item interactMenu fadeInStaggered"
         >
           3D box
         </NuxtLink>
         <NuxtLink
           to="/scroll"
-          class="header-Logo_Item interactEnlarge fadeInStaggered"
+          class="header-Logo_Item interactMenu fadeInStaggered"
         >
           3D scroll
         </NuxtLink>
