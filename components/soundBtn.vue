@@ -25,12 +25,13 @@
     white-space: nowrap
     width: max-content
     color: white
+    font-size: 1.5rem
     &::selection
       background: transparent
   &.active
     opacity: 1
-    width: 6rem
-    height: 2rem
+    width: 4rem
+    height: 4rem
   &.muted
     background: $color-green
     span

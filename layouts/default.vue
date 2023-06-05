@@ -1,8 +1,9 @@
 <template>
   <div class="main">
     <div class="cursor">
-      <span v-if="muted">sound off</span>
-      <span v-else>sound on</span>
+      <div class="strike" />
+      <span v-if="muted">🎵</span>
+      <span v-else>🎵</span>
     </div>
     <TheHeader />
     <slot />
