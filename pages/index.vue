@@ -2,17 +2,17 @@
   <div class="page page-Index">
     <div class="content">
       <div class="section">
-        <PrevNext />
+        <div class="btn-Container btn-Container_Vertical">
+          <PrevNext class="static">Static</PrevNext>
+          <PrevNext class="smooth">Smooth</PrevNext>
+          <PrevNext class="zoom">Zoom</PrevNext>
+        </div>
         <div class="btn-Container btn-Container_Vertical">
           <Btn class="black">I'm static</Btn>
           <Btn class="blue">I'm static</Btn>
           <Btn class="green">I'm static</Btn>
           <Btn class="black smooth">I'm smooth</Btn>
-          <Btn class="blue smooth">I'm smooth</Btn>
-          <Btn class="green smooth">I'm smooth</Btn>
           <Btn class="black interactBtn">I'm scaling</Btn>
-          <Btn class="blue interactBtn">I'm scaling</Btn>
-          <Btn class="green interactBtn">I'm scaling</Btn>
         </div>
       </div>
       <div class="section">
