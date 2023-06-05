@@ -15,6 +15,7 @@
           <Btn class="black interactBtn">I'm scaling</Btn>
         </div>
       </div>
+      <SoundBtn class="blue" />
       <div class="section">
         <h2 class="subtitle">Drop 1 // GENESIS COLLECTION</h2>
         <h1 class="title">
@@ -81,6 +82,9 @@ definePageMeta({
     margin-bottom: 4rem
     @media screen and ( max-width: $breakpoint-mobile)
       padding: 4rem 1rem
+    &.blue
+      border-color: $color-blue
+      min-height: 50vmin
     > div
       margin-bottom: 4rem
       &:last-child
