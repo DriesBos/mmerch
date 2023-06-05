@@ -15,7 +15,7 @@ export default {
 </script>
 
 <style lang="sass">
-$transition-btn: .165s
+$trans-btn: $trans-hover
 
 .btn
   color: black
@@ -24,6 +24,7 @@ $transition-btn: .165s
   border-radius: $border-radius
   cursor: pointer
   white-space: nowrap
+  scale: 1
   span
     color: black
     text-transform: none
@@ -55,12 +56,19 @@ $transition-btn: .165s
         color: white
 
   &.smooth
-    transition: border $transition-btn ease-in-out, background $transition-btn ease-in-out
+    transition: border $trans-btn, background $trans-btn
     span
-      transition: color $transition-btn ease-in-out
+      transition: color $trans-btn
+
+  &.zoom
+    transition: border $trans-btn, background $trans-btn, scale $trans-btn
+    span
+      transition: color $trans-btn
+    &:hover
+      scale: 1.02
 
   &.interactBtn
-    transition: border .33s ease-in-out, background .33s ease-in-out
+    transition: border $trans-btn, background $trans-btn
     span
-      transition: color .33s ease-in-out
+      transition: color $trans-btn
 </style>

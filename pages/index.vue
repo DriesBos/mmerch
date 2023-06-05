@@ -8,11 +8,12 @@
           <PrevNext class="zoom">Zoom</PrevNext>
         </div>
         <div class="btn-Container btn-Container_Vertical">
-          <Btn class="black">I'm static</Btn>
-          <Btn class="blue">I'm static</Btn>
-          <Btn class="green">I'm static</Btn>
-          <Btn class="black smooth">I'm smooth</Btn>
-          <Btn class="black interactBtn">I'm scaling</Btn>
+          <Btn class="black">Static</Btn>
+          <Btn class="blue">Static</Btn>
+          <Btn class="green">Static</Btn>
+          <Btn class="black smooth">Smooth</Btn>
+          <Btn class="black zoom">Zoom</Btn>
+          <Btn class="black interactBtn">Sticky</Btn>
         </div>
       </div>
       <SoundBtn class="blue" />

@@ -44,9 +44,9 @@ export default {
 .cursor
   position: fixed
   width: 6rem
-  height: 4rem
+  height: 2rem
   transform: translate(-50%, -70%)
-  border-radius: $border-radius
+  border-radius: 1000px
   z-index: 999
   pointer-events: none
   opacity: 0

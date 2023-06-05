@@ -19,7 +19,7 @@ import IconArrow from '~/assets/icons/arrow.svg';
 </script>
 
 <style lang="sass">
-$transition-arrow: .165s ease
+$trans-arrow: $trans-hover
 
 .prevNext
   cursor: pointer
@@ -32,6 +32,10 @@ $transition-arrow: .165s ease
     object-fit: contain
     fill: transparent
 
+  &:hover
+    svg
+      fill: $color-red
+
   &-Prev
     transform: rotate(180deg)
 
@@ -41,26 +45,31 @@ $transition-arrow: .165s ease
     justify-content: space-around
     align-items: center
 
+    span
+      font-family: Space Medium
+      font-size: 1.33rem
+      line-height: 1
+
     &.smooth
       .prevNext
         svg
-          transition: all $transition-arrow
+          transition: all $trans-arrow
         &:hover
           svg
             fill: $color-red
-            transition: all $transition-arrow
+            transition: all $trans-arrow
 
     &.zoom
       .prevNext
-        transition: transform $transition-arrow, scale $transition-arrow
+        transition: transform $trans-arrow, scale $trans-arrow
+        scale: 1
         svg
-          transition: all $transition-arrow
+          transition: all $trans-arrow
 
         &:hover
           scale: 1.04
           svg
-            fill: $color-red
-            transition: all $transition-arrow
+            transition: all $trans-arrow
 
         &_Next
           &:hover
