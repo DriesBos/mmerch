@@ -1,5 +1,7 @@
 <template>
-  <div class="section soundBtn"></div>
+  <div class="section soundBtn">
+    <h2 class="subtitle">Video mute button example</h2>
+  </div>
 </template>
 
 <style lang="sass">

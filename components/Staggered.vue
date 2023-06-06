@@ -1,9 +1,12 @@
 <template>
-  <div class="staggered">
-    <div class="item staggerItem" @click="goStagger()"></div>
-    <div class="item staggerItem" @click="goStagger()"></div>
-    <div class="item staggerItem" @click="goStagger()"></div>
-    <!-- <div class="item"></div> -->
+  <div class="staggered-Container">
+    <h2 class="subtitle">Stagger example</h2>
+    <div class="staggered">
+      <div class="item staggerItem" @click="goStagger()"></div>
+      <div class="item staggerItem" @click="goStagger()"></div>
+      <div class="item staggerItem" @click="goStagger()"></div>
+      <!-- <div class="item"></div> -->
+    </div>
   </div>
 </template>
 
@@ -50,4 +53,6 @@ export default {
       margin-left: 0
     &:last-child
       margin-right: 0
+  &-Container
+    width: 100%
 </style>

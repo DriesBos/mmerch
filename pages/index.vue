@@ -3,23 +3,16 @@
     <div class="content">
       <Staggered />
       <div class="section sectionStagger green">
+        <h2 class="subtitle">Header links</h2>
         <Nav class="zoom" />
       </div>
       <div class="section sectionStagger">
+        <h2 class="subtitle">Buttons and arrows</h2>
         <div class="btn-Container btn-Container_Vertical">
-          <PrevNext class="static">Static</PrevNext>
-          <PrevNext class="smooth">Smooth</PrevNext>
-          <PrevNext class="zoom">Zoom</PrevNext>
+          <PrevNext class="zoom">PrevNext Arrows</PrevNext>
         </div>
         <div class="btn-Container btn-Container_Vertical">
-          <Btn class="blue">Static</Btn>
-          <Btn class="green">Static</Btn>
-          <Btn class="black">Static</Btn>
-          <Btn class="black smooth">Smooth</Btn>
-          <Btn class="black zoom">Zoom</Btn>
-          <Btn class="black zoomTwo">Zoom two</Btn>
-          <Btn class="black zoomThree">Zoom three</Btn>
-          <Btn class="black interactBtn">Sticky</Btn>
+          <Btn class="black zoom">Buttons</Btn>
         </div>
       </div>
       <SoundBtn class="blue" />
@@ -131,8 +124,4 @@ export default {
       margin-bottom: 4rem
       &:last-child
         margin-bottom: 0
-    > .subtitle
-      margin-bottom: 1rem
-    > .title
-      margin-bottom: 4rem
 </style>
