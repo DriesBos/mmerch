@@ -20,18 +20,18 @@ console.log('MUTED', props.isMuted);
 <style lang="sass">
 .cursor
   position: fixed
-  width: 0
-  height: 0
+  width: 3rem
+  height: 3rem
   top: 0
   left: 0
   opacity: 0
   transform: translate(-50%, -50%)
   border-radius: 1000px
+  backdrop-filter: blur(10px)
+  background: rgba(255, 255, 255, 0.33)
+  -webkit-backdrop-filter: blur(10px)
   z-index: 999
   pointer-events: none
-  background: rgba(255, 255, 255, 0.33)
-  backdrop-filter: blur(10px)
-  -webkit-backdrop-filter: blur(10px)
   transition: opacity .1s ease-in-out, width .1s ease-in-out, height .1s ease-in-out
   &.active
     opacity: 1
