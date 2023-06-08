@@ -37,7 +37,7 @@ import { gsap } from 'gsap';
 export default {
   data() {
     return {
-      muted: true,
+      muted: false,
       isHovering: false,
     };
   },
