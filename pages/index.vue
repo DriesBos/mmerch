@@ -51,9 +51,11 @@
 </template>
 
 <script>
+// import soundBtn from '@/mixins/hoverAnimations';
 import { gsap } from 'gsap';
 
 export default {
+  mixins: [hoverAnimations],
   mounted() {
     this.goStagger();
   },
