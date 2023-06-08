@@ -27,9 +27,9 @@ console.log('MUTED', props.isMuted);
   opacity: 0
   transform: translate(-50%, -50%)
   border-radius: 1000px
-  backdrop-filter: blur(10px)
+  backdrop-filter: blur(5px)
+  -webkit-backdrop-filter: blur(5px)
   background: rgba(255, 255, 255, 0.33)
-  -webkit-backdrop-filter: blur(10px)
   z-index: 999
   pointer-events: none
   transition: opacity .1s ease-in-out, width .1s ease-in-out, height .1s ease-in-out

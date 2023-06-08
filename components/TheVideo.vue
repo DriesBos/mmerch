@@ -142,8 +142,8 @@ export default {
   z-index: 999
   pointer-events: none
   background: rgba(255, 255, 255, 0.33)
-  backdrop-filter: blur(10px)
-  -webkit-backdrop-filter: blur(10px)
+  backdrop-filter: blur(5px)
+  -webkit-backdrop-filter: blur(5px)
   transition: opacity .1s ease-in-out
   &.isHovering
     opacity: 1
