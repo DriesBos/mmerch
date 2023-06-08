@@ -55,7 +55,7 @@
 import { gsap } from 'gsap';
 
 export default {
-  mixins: [hoverAnimations],
+  // mixins: [hoverAnimations],
   mounted() {
     this.goStagger();
   },

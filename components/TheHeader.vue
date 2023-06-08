@@ -67,10 +67,10 @@
 </template>
 
 <script>
-import hoverAnimations from '@/mixins/hoverAnimations';
+// import hoverAnimations from '@/mixins/hoverAnimations';
 
 export default {
-  mixins: [hoverAnimations],
+  // mixins: [hoverAnimations],
 };
 </script>
 
