@@ -29,24 +29,18 @@ console.log('MUTED', props.isMuted);
   border-radius: 1000px
   z-index: 999
   pointer-events: none
-  background: $color-red
+  background: rgba(255, 255, 255, 0.33)
+  backdrop-filter: blur(10px)
+  -webkit-backdrop-filter: blur(10px)
   transition: opacity .1s ease-in-out, width .1s ease-in-out, height .1s ease-in-out
   &.active
     opacity: 1
-    width: 4rem
-    height: 4rem
-  &.isHovering
-    opacity: 1
-    width: 4rem
-    height: 4rem
-    top: auto
-    left: auto
-    bottom: 1rem
-    right: 1rem
+    width: 3rem
+    height: 3rem
   &-Icon
     display: none
-    width: 2rem
-    height: 2rem
+    width: 1.5rem
+    height: 1.5rem
     position: absolute
     left: 50%
     top: 50%
@@ -55,7 +49,7 @@ console.log('MUTED', props.isMuted);
       width: 100%
       height: 100%
       object-fit: contain
-      color: white
+      color: black
     &.isMuted
       display: inline-block
     &.isUnmuted

@@ -112,7 +112,7 @@ export default {
 <style lang="sass">
 .theVideo
   position: relative
-  // cursor: none
+  cursor: none
   height: auto
   width: 50vmin
   border-radius: 10rem 10rem 2rem 2rem
@@ -133,23 +133,24 @@ export default {
 
 .cursorTwo
   position: absolute
-  width: 4rem
-  height: 4rem
-  bottom: .5rem !important
-  right: .5rem !important
+  width: 3rem
+  height: 3rem
+  bottom: 1rem
+  right: 1.5rem
   opacity: 0
-  transform: translate(-50%, -50%)
   border-radius: 1000px
   z-index: 999
   pointer-events: none
-  background: $color-red
-  transition: opacity .1s ease-in-out, width .1s ease-in-out, height .1s ease-in-out
+  background: rgba(255, 255, 255, 0.33)
+  backdrop-filter: blur(10px)
+  -webkit-backdrop-filter: blur(10px)
+  transition: opacity .1s ease-in-out
   &.isHovering
     opacity: 1
   &-Icon
     display: none
-    width: 2rem
-    height: 2rem
+    width: 1.5rem
+    height: 1.5rem
     position: absolute
     left: 50%
     top: 50%
@@ -158,7 +159,7 @@ export default {
       width: 100%
       height: 100%
       object-fit: contain
-      color: white
+      color: black
     &.isMuted
       display: inline-block
     &.isUnmuted
