@@ -1,9 +1,12 @@
 <template>
   <div class="main">
     <div class="cursor">
-      <div class="strike" />
-      <span v-if="muted">🎵</span>
-      <span v-else>🎵</span>
+      <IconSoundoff class="sound-Icon" alt="sound off" />
+      <IconArrow class="prevNext-Icon" alt="next" />
+      <div v-if="muted"></div>
+      <div v-else>
+        <IconSoundon class="sound-Icon" alt="sound on" />
+      </div>
     </div>
     <TheHeader />
     <slot />
@@ -11,6 +14,9 @@
 </template>
 
 <script>
+import IconSoundoff from '~/assets/icons/soundoff.svg';
+import IconSoundon from '~/assets/icons/soundon.svg';
+import IconArrow from '~/assets/icons/arrow.svg';
 import { gsap } from 'gsap';
 
 export default {
@@ -22,31 +28,31 @@ export default {
   mounted() {
     this.customCursor();
     document
-      .querySelectorAll('.soundBtn')
+      .querySelectorAll('.theVideo')
       .forEach((item) => item.addEventListener('mouseover', this.changeCursor));
     document
-      .querySelectorAll('.soundBtn')
+      .querySelectorAll('.theVideo')
       .forEach((item) =>
         item.addEventListener('mouseleave', this.removeChangeCursor)
       );
     document
-      .querySelectorAll('.soundBtn')
+      .querySelectorAll('.theVideo')
       .forEach((item) => item.addEventListener('mouseup', this.changeMute));
   },
   unmounted() {
     this.removeChangeCursor();
     document
-      .querySelectorAll('.soundBtn')
+      .querySelectorAll('.theVideo')
       .forEach((item) =>
         item.removeEventListener('mouseover', this.changeCursor)
       );
     document
-      .querySelectorAll('.soundBtn')
+      .querySelectorAll('.theVideo')
       .forEach((item) =>
         item.removeEventListener('mouseleave', this.removeChangeCursor)
       );
     document
-      .querySelectorAll('.soundBtn')
+      .querySelectorAll('.theVideo')
       .forEach((item) => item.removeEventListener('mouseup', this.changeMute));
   },
   methods: {

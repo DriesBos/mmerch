@@ -39,6 +39,12 @@
           home
         </NuxtLink>
         <NuxtLink
+          to="/video"
+          class="header-Logo_Item interactMenu fadeInStaggered"
+        >
+          video
+        </NuxtLink>
+        <NuxtLink
           to="/trifecta"
           class="header-Logo_Item interactMenu fadeInStaggered"
           >Trifecta</NuxtLink

@@ -15,7 +15,6 @@
           <Btn class="black zoom">Buttons</Btn>
         </div>
       </div>
-      <SoundBtn class="blue" />
       <div class="section sectionStagger">
         <h2 class="subtitle">Drop 1 // GENESIS COLLECTION</h2>
         <h1 class="title">
@@ -71,7 +70,7 @@ export default {
 };
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 .sectionStagger
   opacity: 0
   scale: 0.995
