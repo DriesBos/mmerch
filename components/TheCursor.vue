@@ -14,7 +14,7 @@ import SoundOn from '~/assets/icons/soundon.svg';
 import Soundoff from '~/assets/icons/soundoff.svg';
 
 const props = defineProps(['isMuted']);
-console.group(props);
+console.log('MUTED', props.isMuted);
 </script>
 
 <style lang="sass">
@@ -22,11 +22,9 @@ console.group(props);
   position: fixed
   width: 0
   height: 0
+  top: 0
+  left: 0
   opacity: 0
-  bottom: 1rem
-  right: 1rem
-  width: 4rem
-  height: 4rem
   transform: translate(-50%, -50%)
   border-radius: 1000px
   z-index: 999
@@ -37,6 +35,14 @@ console.group(props);
     opacity: 1
     width: 4rem
     height: 4rem
+  &.isHovering
+    opacity: 1
+    width: 4rem
+    height: 4rem
+    top: auto
+    left: auto
+    bottom: 1rem
+    right: 1rem
   &-Icon
     display: none
     width: 2rem

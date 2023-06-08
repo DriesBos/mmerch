@@ -1,7 +1,15 @@
 <template>
   <div class="theVideo-Container">
-    <TheCursor :isMuted="muted" />
     <div class="theVideo">
+      <TheCursor :isMuted="muted" />
+      <div class="cursorTwo" :class="[{ isHovering: !isHovering }]">
+        <div class="cursor-Icon" :class="{ isUnmuted: !muted }">
+          <svgoSoundoff class="sound-Icon" alt="sound off" />
+        </div>
+        <div class="cursor-Icon" :class="{ isMuted: muted }">
+          <svgoSoundOn class="sound-Icon" alt="sound on" />
+        </div>
+      </div>
       <video
         autoplay
         loop
@@ -30,6 +38,7 @@ export default {
   data() {
     return {
       muted: true,
+      isHovering: false,
     };
   },
   mounted() {
@@ -47,7 +56,7 @@ export default {
       .forEach((item) => item.addEventListener('mouseup', this.changeMute));
   },
   unmounted() {
-    this.removeChangeCursor();
+    this.customCursor();
     document
       .querySelectorAll('.theVideo')
       .forEach((item) =>
@@ -70,15 +79,16 @@ export default {
           left: e.clientX,
           top: e.clientY,
           ease: 'ease',
-          // delay: 0.05,
         });
       }
       document.addEventListener('mousemove', moveCursor);
     },
     changeCursor() {
+      this.isHovering = true;
       document.querySelector('.cursor').classList.add('active');
     },
     removeChangeCursor() {
+      this.isHovering = false;
       document.querySelector('.cursor').classList.remove('active');
     },
     // MUTE BOOLEAN
@@ -94,7 +104,6 @@ export default {
         media.muted = true;
         this.muted = true;
       }
-      console.log(this.muted);
     },
   },
 };
@@ -102,7 +111,8 @@ export default {
 
 <style lang="sass">
 .theVideo
-  cursor: none
+  position: relative
+  // cursor: none
   height: auto
   width: 50vmin
   border-radius: 10rem 10rem 2rem 2rem
@@ -120,4 +130,37 @@ export default {
         margin-bottom: 0
   &-Explainer
     max-width: 50vmin
+
+.cursorTwo
+  position: absolute
+  width: 4rem
+  height: 4rem
+  bottom: .5rem !important
+  right: .5rem !important
+  opacity: 0
+  transform: translate(-50%, -50%)
+  border-radius: 1000px
+  z-index: 999
+  pointer-events: none
+  background: $color-red
+  transition: opacity .1s ease-in-out, width .1s ease-in-out, height .1s ease-in-out
+  &.isHovering
+    opacity: 1
+  &-Icon
+    display: none
+    width: 2rem
+    height: 2rem
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    svg
+      width: 100%
+      height: 100%
+      object-fit: contain
+      color: white
+    &.isMuted
+      display: inline-block
+    &.isUnmuted
+      display: inline-block
 </style>
