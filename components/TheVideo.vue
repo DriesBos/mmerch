@@ -7,7 +7,7 @@
           <svgoSoundoff class="sound-Icon" alt="sound off" />
         </div>
         <div class="cursor-Icon" :class="{ isMuted: muted }">
-          <svgoSoundOn class="sound-Icon" alt="sound on" />
+          <svgoSoundon class="sound-Icon" alt="sound on" />
         </div>
       </div>
       <video
