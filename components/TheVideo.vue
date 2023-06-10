@@ -43,7 +43,6 @@ export default {
   },
   mounted() {
     this.customCursor();
-    setTimeout(this.videoStart(), 10000);
     document
       .querySelectorAll('.theVideo')
       .forEach((item) => item.addEventListener('mouseover', this.changeCursor));
@@ -145,8 +144,8 @@ export default {
   position: absolute
   width: 64px
   height: 64px
-  bottom: 32px
-  right: 48px
+  bottom: 1.5rem
+  right: 1.5rem
   opacity: 0
   border-radius: 1000px
   z-index: 999
