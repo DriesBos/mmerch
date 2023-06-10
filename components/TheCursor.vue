@@ -1,18 +1,15 @@
 <template>
   <div class="cursor soundBtn">
     <div class="cursor-Icon" :class="{ isUnmuted: !isMuted }">
-      <Soundoff class="sound-Icon" alt="sound off" />
+      <svgoSoundoff-new class="sound-Icon" alt="sound off" />
     </div>
     <div class="cursor-Icon" :class="{ isMuted: isMuted }">
-      <SoundOn class="sound-Icon" alt="sound on" />
+      <svgoSoundon-new class="sound-Icon" alt="sound on" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import SoundOn from '~/assets/icons/soundon.svg';
-import Soundoff from '~/assets/icons/soundoff.svg';
-
 const props = defineProps(['isMuted']);
 console.log('MUTED', props.isMuted);
 </script>
@@ -35,12 +32,12 @@ console.log('MUTED', props.isMuted);
   transition: opacity .1s ease-in-out, width .1s ease-in-out, height .1s ease-in-out
   &.active
     opacity: 1
-    width: 3rem
-    height: 3rem
+    width: 64px
+    height: 64px
   &-Icon
     display: none
-    width: 1.5rem
-    height: 1.5rem
+    width: 36px
+    height: 36px
     position: absolute
     left: 50%
     top: 50%

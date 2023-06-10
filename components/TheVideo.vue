@@ -4,10 +4,10 @@
       <TheCursor :isMuted="muted" />
       <div class="cursorTwo" :class="[{ isHovering: !isHovering }]">
         <div class="cursor-Icon" :class="{ isUnmuted: !muted }">
-          <svgoSoundoff class="sound-Icon" alt="sound off" />
+          <svgoSoundoff-new class="sound-Icon" alt="sound off" />
         </div>
         <div class="cursor-Icon" :class="{ isMuted: muted }">
-          <svgoSoundon class="sound-Icon" alt="sound on" />
+          <svgoSoundon-new class="sound-Icon" alt="sound on" />
         </div>
       </div>
       <video
@@ -115,8 +115,12 @@ export default {
   cursor: none
   height: auto
   width: 50vmin
-  border-radius: 10rem 10rem 2rem 2rem
+  border-radius: 12rem 12rem 2.5rem 2.5rem
   overflow: hidden
+  video
+    width: 100%
+    height: 100%
+    object-fit: contain
   &-Container
     position: relative
     padding: 12rem 4rem
@@ -133,10 +137,10 @@ export default {
 
 .cursorTwo
   position: absolute
-  width: 3rem
-  height: 3rem
-  bottom: 1rem
-  right: 1.5rem
+  width: 64px
+  height: 64px
+  bottom: 32px
+  right: 48px
   opacity: 0
   border-radius: 1000px
   z-index: 999
@@ -149,8 +153,8 @@ export default {
     opacity: 1
   &-Icon
     display: none
-    width: 1.5rem
-    height: 1.5rem
+    width: 36px
+    height: 36px
     position: absolute
     left: 50%
     top: 50%
