@@ -4,10 +4,10 @@
       <TheCursor :isMuted="muted" />
       <div class="cursorTwo" :class="[{ isHovering: !isHovering }]">
         <div class="cursor-Icon" :class="{ isUnmuted: !muted }">
-          <svgoSoundoff-new class="sound-Icon" alt="sound off" />
+          <svgoSoundon-new class="sound-Icon" alt="sound off" />
         </div>
         <div class="cursor-Icon" :class="{ isMuted: muted }">
-          <svgoSoundon-new class="sound-Icon" alt="sound on" />
+          <svgoSoundoff-new class="sound-Icon" alt="sound on" />
         </div>
       </div>
       <video
@@ -37,12 +37,13 @@ import { gsap } from 'gsap';
 export default {
   data() {
     return {
-      muted: false,
+      muted: true,
       isHovering: false,
     };
   },
   mounted() {
     this.customCursor();
+    setTimeout(this.videoStart(), 10000);
     document
       .querySelectorAll('.theVideo')
       .forEach((item) => item.addEventListener('mouseover', this.changeCursor));
@@ -72,6 +73,11 @@ export default {
       .forEach((item) => item.removeEventListener('mouseup', this.changeMute));
   },
   methods: {
+    videoStart() {
+      const media = document.querySelector('video');
+      media.muted = false;
+      media.play;
+    },
     customCursor() {
       const cursor = document.querySelector('.cursor');
       function moveCursor(e) {

@@ -1,10 +1,10 @@
 <template>
   <div class="cursor soundBtn">
     <div class="cursor-Icon" :class="{ isUnmuted: !isMuted }">
-      <svgoSoundoff-new class="sound-Icon" alt="sound off" />
+      <svgoSoundon-new class="sound-Icon" alt="sound off" />
     </div>
     <div class="cursor-Icon" :class="{ isMuted: isMuted }">
-      <svgoSoundon-new class="sound-Icon" alt="sound on" />
+      <svgoSoundoff-new class="sound-Icon" alt="sound on" />
     </div>
   </div>
 </template>
