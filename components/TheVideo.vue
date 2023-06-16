@@ -18,16 +18,6 @@
         type="video/mp4"
       />
     </div>
-    <div class="theVideo-Explainer">
-      <p>Video mute button example. For mobile please check page on mobile</p>
-    </div>
-    <div class="theVideo-Explainer">
-      <p>
-        IF the video is muted THEN browsers will allow it to play automatically.
-        IF the video is unmuted THEN browsers will stop the video until users
-        start it manually.
-      </p>
-    </div>
   </div>
 </template>
 
