@@ -80,7 +80,6 @@ export default {
   &-Animation
     position: relative
     height: 100%
-    flex-grow: 1
     overflow-x: auto
     white-space: nowrap
     vertical-align: bottom
@@ -99,18 +98,22 @@ export default {
       display: none
   &-Nav
     display: flex
+    flex-direction: row
+    flex-wrap: nowrap
     flex-shrink: 0
+    justify-content: flex-start
     border-left: $border-width solid $color
     padding: 0 $spacing-one
+    overflow-x: auto
     & > a
       color: black
       font-family: Space Medium
       text-transform: lowercase
       padding: $spacing-two $spacing-one
+      white-space: nowrap
       text-decoration: none
       @media screen and ( max-width: $breakpoint-mobile)
         padding: 1rem .5rem
-      // &.router-link-exact-active
 
 @keyframes textTransform
   from
