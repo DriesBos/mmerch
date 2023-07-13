@@ -69,6 +69,16 @@
           <Btn class="blue zoom">Let's connect</Btn>
         </div>
       </div>
+
+      <div class="section sectionStagger">
+        <h2 class="subtitle">SPACING EXAMPLE</h2>
+        <div class="spacing">
+          <div><span>16</span></div>
+          <div><span>32</span></div>
+          <div><span>64</span></div>
+          <div><span>128</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -99,6 +109,32 @@ export default {
 .sectionStagger
   opacity: 0
   scale: 0.995
+.spacing
+  width: 100%
+  display: flex
+  justify-content: flex-start
+  flex-wrap: nowrap
+  span
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  & > div
+    flex-grow: 1
+    margin-right: 1rem
+    border-radius: $border-radius
+    position: relative
+    background: $color-red
+    &:last-child
+      margin-right: 0
+    &:nth-child(1)
+      height: 1rem
+    &:nth-child(2)
+      height: 2rem
+    &:nth-child(3)
+      height: 3rem
+    &:nth-child(4)
+      height: 4rem
 .content
   display: flex
   flex-direction: column
