@@ -14,6 +14,7 @@
   justify-content: center
   border: $border-width solid $color
   border-radius: $border-radius
+  overflow-x: auto
   span
     font-family: Space Medium
     font-size: 1rem
