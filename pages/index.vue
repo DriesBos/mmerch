@@ -142,6 +142,7 @@ export default {
   align-items: center
   background: $color-white
   padding: 12rem 4rem
+  overflow-x: hidden
   @media screen and ( max-width: $breakpoint-mobile)
     padding: 12rem 1rem
   border-radius: $border-radius
