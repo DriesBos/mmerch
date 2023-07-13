@@ -15,8 +15,8 @@
           <Btn class="black zoom">Buttons</Btn>
         </div>
       </div>
-      <div class="section sectionStagger">
-        <h2 class="subtitle">Drop 1 // GENESIS COLLECTION</h2>
+      <div class="section sectionStagger green">
+        <h2 class="subtitle">Drop 1 // artist and artwork</h2>
         <h1 class="title">
           Our first drop is in collaboration with the legendary, multi-award
           winning comic book artist, Gilbert Hernández.
@@ -29,40 +29,39 @@
           on-chain data to prove it.
         </p>
 
-        <div class="btn-Container">
-          <Btn class="black zoom">Let's connect</Btn>
-        </div>
-      </div>
-      <div class="section sectionStagger green">
-        <h2 class="subtitle">Drop 1 // GENESIS COLLECTION</h2>
-        <h1 class="title">
-          Our first drop is in collaboration with the legendary, multi-award
-          winning comic book artist, Gilbert Hernández.
-        </h1>
-        <p class="paragraph">
-          We make one-of-one fashion for everyone — singular designs that define
-          the wearer as provably unique while simultaneously connecting them to
-          the larger network of mmERCH collectors. We believe in a world of
-          difference where clothes are as distinctive as DNA and you've got the
-          on-chain data to prove it.
-        </p>
         <div class="btn-Container">
           <Btn class="green zoom">Let's connect</Btn>
         </div>
       </div>
-
-      <div class="section sectionStagger blue">
-        <h2 class="subtitle">Drop 1 // GENESIS COLLECTION</h2>
-        <h1 class="title">
-          Our first drop is in collaboration with the legendary, multi-award
-          winning comic book artist, Gilbert Hernández.
-        </h1>
+      <div class="section sectionStagger">
+        <h2 class="subtitle">MMERCH</h2>
+        <h1 class="title">A Manifesto for a Future Heritage</h1>
         <p class="paragraph">
           We make one-of-one fashion for everyone — singular designs that define
           the wearer as provably unique while simultaneously connecting them to
           the larger network of mmERCH collectors. We believe in a world of
           difference where clothes are as distinctive as DNA and you've got the
           on-chain data to prove it.
+        </p>
+        <div class="btn-Container">
+          <Btn class="black zoom">Let's connect</Btn>
+        </div>
+      </div>
+
+      <div class="section sectionStagger blue">
+        <h2 class="subtitle">THE MMERCH SQUAD</h2>
+        <h1 class="title">
+          A collection of artists, esthetes, degens, designers, philosophers,
+          and coders.
+        </h1>
+        <p class="paragraph">
+          mmERCH is the culmination of Colby Mugrabi’s beaming, gleaming love of
+          art and fashion. After studying art history and fashion business at
+          the Gallatin School (at NYU), Colby founded the much lauded website,
+          Minnie Muse. Known, and notable, for its original high-quality content
+          that cultivates the cross-pollination of art, fashion, architecture,
+          and design, Minnie Muse has earned a wide and adoring audience along
+          with praise from the press.
         </p>
 
         <div class="btn-Container">
