@@ -155,9 +155,11 @@ export default {
     border: $border-width solid currentColor
     width: 100%
     max-width: 1440px
-    padding: 4rem 2rem
+    padding: 6rem 2rem
     border-radius: 2rem 2rem 1rem 1rem
     margin-bottom: 4rem
+    @media screen and ( max-width: $breakpoint-mobile)
+      padding: 4rem 2rem
     &.blue
       border-color: $color-blue
       min-height: 50vmin
