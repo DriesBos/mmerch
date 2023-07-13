@@ -111,14 +111,11 @@ $breakpoint-tablet: 800px
   position: relative
   cursor: none
   height: auto
-  width: 80vmin
+  width: 30rem
   overflow: hidden
   max-width: 800px
   @media (max-width: $breakpoint-mobile)
-    width: calc(100% - 4rem)
-    max-width: 100%
-  @media (max-width: $breakpoint-mobile)
-    width: calc(100% - 4rem)
+    width: calc(100% - 2rem)
     max-width: 100%
   video
     width: 100%
