@@ -121,7 +121,7 @@ $breakpoint-tablet: 800px
     width: 100%
     height: 100%
     object-fit: contain
-    border-radius: 12.5rem 12.5rem 2.5rem 2.5rem
+    border-radius: 15rem 15rem 5rem 5rem
   &-Container
     position: relative
     padding: 12rem 0
