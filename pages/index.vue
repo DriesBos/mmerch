@@ -21,6 +21,14 @@
           Our first drop is in collaboration with the legendary, multi-award
           winning comic book artist, Gilbert Hernández.
         </h1>
+        <p class="paragraph">
+          We make one-of-one fashion for everyone — singular designs that define
+          the wearer as provably unique while simultaneously connecting them to
+          the larger network of mmERCH collectors. We believe in a world of
+          difference where clothes are as distinctive as DNA and you've got the
+          on-chain data to prove it.
+        </p>
+
         <div class="btn-Container">
           <Btn class="black zoom">Let's connect</Btn>
         </div>
@@ -31,6 +39,13 @@
           Our first drop is in collaboration with the legendary, multi-award
           winning comic book artist, Gilbert Hernández.
         </h1>
+        <p class="paragraph">
+          We make one-of-one fashion for everyone — singular designs that define
+          the wearer as provably unique while simultaneously connecting them to
+          the larger network of mmERCH collectors. We believe in a world of
+          difference where clothes are as distinctive as DNA and you've got the
+          on-chain data to prove it.
+        </p>
         <div class="btn-Container">
           <Btn class="green zoom">Let's connect</Btn>
         </div>
@@ -42,6 +57,14 @@
           Our first drop is in collaboration with the legendary, multi-award
           winning comic book artist, Gilbert Hernández.
         </h1>
+        <p class="paragraph">
+          We make one-of-one fashion for everyone — singular designs that define
+          the wearer as provably unique while simultaneously connecting them to
+          the larger network of mmERCH collectors. We believe in a world of
+          difference where clothes are as distinctive as DNA and you've got the
+          on-chain data to prove it.
+        </p>
+
         <div class="btn-Container">
           <Btn class="blue zoom">Let's connect</Btn>
         </div>

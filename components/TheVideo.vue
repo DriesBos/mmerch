@@ -4,10 +4,10 @@
       <TheCursor :isMuted="muted" />
       <div class="cursorTwo" :class="[{ isHovering: !isHovering }]">
         <div class="cursor-Icon" :class="{ isUnmuted: !muted }">
-          <svgoSoundon-new class="sound-Icon" alt="sound off" />
+          <svgoSoundon class="sound-Icon" alt="sound off" />
         </div>
         <div class="cursor-Icon" :class="{ isMuted: muted }">
-          <svgoSoundoff-new class="sound-Icon" alt="sound on" />
+          <svgoSoundoff class="sound-Icon" alt="sound on" />
         </div>
       </div>
       <video
@@ -105,20 +105,29 @@ export default {
 </script>
 
 <style lang="sass">
+$breakpoint-tablet: 800px
+
 .theVideo
   position: relative
   cursor: none
   height: auto
-  width: 50vmin
-  border-radius: 12rem 12rem 2.5rem 2.5rem
+  width: 80vmin
   overflow: hidden
+  max-width: 800px
+  @media (max-width: $breakpoint-mobile)
+    width: calc(100% - 4rem)
+    max-width: 100%
+  @media (max-width: $breakpoint-mobile)
+    width: calc(100% - 4rem)
+    max-width: 100%
   video
     width: 100%
     height: 100%
     object-fit: contain
+    border-radius: 12.5rem 12.5rem 2.5rem 2.5rem
   &-Container
     position: relative
-    padding: 12rem 4rem
+    padding: 12rem 0
     display: flex
     flex-direction: column
     align-items: center
@@ -132,8 +141,8 @@ export default {
 
 .cursorTwo
   position: absolute
-  width: 64px
-  height: 64px
+  width: 96px
+  height: 96px
   bottom: 1.5rem
   right: 1.5rem
   opacity: 0
@@ -148,8 +157,8 @@ export default {
     opacity: 1
   &-Icon
     display: none
-    width: 36px
-    height: 36px
+    width: 64px
+    height: 64px
     position: absolute
     left: 50%
     top: 50%
