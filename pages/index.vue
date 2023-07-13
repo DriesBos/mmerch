@@ -88,7 +88,16 @@ import { gsap } from 'gsap';
 
 export default {
   // mixins: [hoverAnimations],
+  watch: {
+    $route(to, from) {
+      this.goStagger();
+      console.log('ROUTE CHANGE HOME');
+    },
+  },
   mounted() {
+    this.goStagger();
+  },
+  updated() {
     this.goStagger();
   },
   methods: {

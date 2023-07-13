@@ -14,6 +14,12 @@
 import { gsap } from 'gsap';
 
 export default {
+  watch: {
+    $route(to, from) {
+      this.goStagger();
+      console.log('ROUTE CHANGE');
+    },
+  },
   mounted() {
     this.goStagger();
   },
