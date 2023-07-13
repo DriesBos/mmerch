@@ -7,18 +7,24 @@ html
   overflow-x: hidden
 
 .subtitle
-  margin-bottom: 1rem
+  margin-bottom: 2rem
   font-family: 'Space Bold'
   text-transform: uppercase
   font-size: 0.9166rem
   line-height: 1.28
+  @media screen and ( max-width: $breakpoint-mobile)
+    margin-bottom: 1rem
 .title
-  margin-bottom: 1rem
+  margin-bottom: 2rem
   font-family: 'Space Medium'
   line-height: 1.28
+  @media screen and ( max-width: $breakpoint-mobile)
+    margin-bottom: 1rem
 .paragraph
   margin-bottom: 4rem
   line-height: 1.6
+  @media screen and ( max-width: $breakpoint-mobile)
+    margin-bottom: 2rem
 
 .page
   position: relative
