@@ -37,7 +37,22 @@ $trans-arrow: $trans-hover
       fill: $color-red
 
   &-Prev
-    transform: rotate(180deg)
+    svg
+      transform: rotate(180deg) translateY(0)
+      transition: transform .4s ease
+    &:hover
+      svg
+        transform: rotate(180deg) translateY(0.1em)
+        transition: transform .2s ease
+
+  &-Next
+    svg
+      transform: rotate(0) translateY(0)
+      transition: transform .4s ease
+    &:hover
+      svg
+        transform: rotate(0) translateY(-0.1em)
+        transition: transform .2s ease
 
   &-Container
     width: 100%
@@ -50,32 +65,39 @@ $trans-arrow: $trans-hover
       font-size: 1.33rem
       line-height: 1
 
-    &.smooth
-      .prevNext
-        svg
-          transition: all $trans-arrow
-        &:hover
-          svg
-            fill: $color-red
-            transition: all $trans-arrow
+    // &.smooth
+    //   .prevNext
+    //     svg
+    //       transition: all $trans-arrow
+    //     &:hover
+    //       svg
+    //         fill: $color-red
+    //         transition: all $trans-arrow
 
-    &.zoom
-      .prevNext
-        transition: transform $trans-arrow, scale $trans-arrow
-        scale: 1
-        svg
-          transition: all $trans-arrow
+    // &.up
+    //   transform: translateY(0)
+    //   transition: transform .4s ease
+    //   &:hover
+    //     transform: translateY(-0.1em)
+    //     transition: transform .2s ease
 
-        &:hover
-          scale: 1.04
-          svg
-            transition: all $trans-arrow
+    // &.zoom
+    //   .prevNext
+    //     transition: transform $trans-arrow, scale $trans-arrow
+    //     scale: 1
+    //     svg
+    //       transition: all $trans-arrow
 
-        &_Next
-          &:hover
-            transform: translateX(4%)
+    //     &:hover
+    //       scale: 1.04
+    //       svg
+    //         transition: all $trans-arrow
 
-        &_Prev
-          &:hover
-            transform: translateX(-4%) rotate(180deg)
+    //     &_Next
+    //       &:hover
+    //         transform: translateX(4%)
+
+    //     &_Prev
+    //       &:hover
+    //         transform: translateX(-4%) rotate(180deg)
 </style>
