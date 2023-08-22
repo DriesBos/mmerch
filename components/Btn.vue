@@ -60,6 +60,13 @@ $trans-btn: $trans-hover
     span
       transition: color $trans-btn
 
+  &.up
+    transform: translateY(0)
+    transition: transform .4s ease
+    &:hover
+      transform: translateY(-0.1em)
+      transition: transform .2s ease
+
   &.zoom
     transition: border $trans-btn, background $trans-btn, scale $trans-btn
     span

@@ -30,7 +30,7 @@
         </p>
 
         <div class="btn-Container">
-          <Btn class="green zoom">Let's connect</Btn>
+          <Btn class="green up">Let's connect</Btn>
         </div>
       </div>
       <div class="section sectionStagger">
