@@ -43,7 +43,7 @@ const divisions = 100;
 const color = '#0F22FD';
 const gridHelper = new GridHelper(size, divisions, color, color);
 gridHelper.position.y = -0.33;
-scene.add(gridHelper);
+// scene.add(gridHelper);
 
 // CAMERA
 const camera = new PerspectiveCamera(50, aspectRatio.value, 0.1, 2000);
@@ -78,6 +78,15 @@ shiba.load('/models/Shiba/scene.gltf', (gltf) => {
   gltf.scene.scale.set(0.75, 0.75, 0.75);
   scene.add(gltf.scene);
 });
+
+// // => NOODLE
+// const noodle = new GLTFLoader();
+
+// noodle.load('/models/noodle.glb', (gltf) => {
+//   gltf.scene.position.set(0, 2, -4.5);
+//   gltf.scene.scale.set(0.75, 0.75, 0.75);
+//   scene.add(gltf.scene);
+// });
 
 // => PLANES
 const sphere1 = new Mesh(
@@ -114,10 +123,12 @@ const cameraDistanceY = 1;
 sphere1.position.z = -objectsDistanceZ * 1;
 sphere2.position.z = -objectsDistanceZ * 2;
 sphere3.position.z = -objectsDistanceZ * 3;
+// sphere4.position.z = -objectsDistanceZ * 4;
 
 sphere1.position.y = objectsDistanceY * 0;
 sphere2.position.y = objectsDistanceY * 1;
 sphere3.position.y = objectsDistanceY * 2;
+// sphere4.position.y = objectsDistanceY * 3;
 
 // OBJECTS => PARTICLES
 

@@ -1,9 +1,9 @@
 <template>
   <div class="nav">
-    <span>hyperlink</span>
-    <span>hyperlink</span>
-    <span>hyperlink</span>
-    <span>hyperlink</span>
+    <span class="link-scale">hyperlink</span>
+    <span class="link-scale">hyperlink</span>
+    <span class="link-up">hyperlink</span>
+    <span class="link-up">hyperlink</span>
   </div>
 </template>
 
@@ -21,8 +21,17 @@
     line-height: 1
     padding: .5rem .5rem
     margin: 1rem .5rem
-    transition: scale $trans-hover
     cursor: pointer
-    &:hover
-      scale: 1.05
+
+.link-scale
+  scale: 1
+  transition: scale .165s ease-in-out
+  &:hover
+      scale: 1.025
+
+.link-up
+  transform: translateY(0)
+  transition: transform .25s ease
+  &:hover
+    transform: translateY(-2px)
 </style>
