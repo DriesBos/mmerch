@@ -31,7 +31,8 @@
 
 .link-up
   transform: translateY(0)
-  transition: transform .25s ease
+  transition: transform .4s ease-out
   &:hover
-    transform: translateY(-2px)
+    transform: translateY(-0.1em)
+    transition: transform .2s ease-in
 </style>
