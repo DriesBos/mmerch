@@ -12,7 +12,7 @@
           <PrevNext class="zoom">PrevNext Arrows</PrevNext>
         </div>
         <div class="btn-Container btn-Container_Vertical">
-          <Btn class="black zoom">Buttons</Btn>
+          <Btn class="black up">Buttons</Btn>
         </div>
       </div>
       <div class="section sectionStagger green">

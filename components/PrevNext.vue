@@ -39,7 +39,7 @@ $trans-arrow: $trans-hover
   &-Prev
     svg
       transform: rotate(180deg) translateY(0)
-      transition: transform .4s ease
+      transition: transform .2s ease
     &:hover
       svg
         transform: rotate(180deg) translateY(0.1em)
@@ -48,7 +48,7 @@ $trans-arrow: $trans-hover
   &-Next
     svg
       transform: rotate(0) translateY(0)
-      transition: transform .4s ease
+      transition: transform .2s ease
     &:hover
       svg
         transform: rotate(0) translateY(-0.1em)
