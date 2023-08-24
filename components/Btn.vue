@@ -68,31 +68,12 @@ $trans-btn: $trans-hover
 
   &.zoom
     scale: 1
-    transition: .4s ease-out
+    transition: .2s ease-out
     span
-      transition: .4s ease-out
+      transition: .2s ease-out
     &:hover
       scale: 1.02
       transition: .2s ease-in
       span
         transition: .2s ease-in
-
-  &.zoomTwo
-    transition: border $trans-btn, background $trans-btn, scale $trans-btn
-    span
-      transition: color $trans-btn
-    &:hover
-      scale: 1.04
-
-  &.zoomThree
-    transition: border $trans-btn, background $trans-btn, scale $trans-btn
-    span
-      transition: color $trans-btn
-    &:hover
-      scale: 1.01
-
-  &.interactBtn
-    transition: border $trans-btn, background $trans-btn
-    span
-      transition: color $trans-btn
 </style>
