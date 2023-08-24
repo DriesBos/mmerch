@@ -42,7 +42,7 @@ $trans-arrow: $trans-hover
       transition: transform .2s ease
     &:hover
       svg
-        transform: rotate(180deg) translateY(0.1em)
+        transform: rotate(180deg) translateY(0.05em)
         transition: transform .2s ease
 
   &-Next
@@ -51,7 +51,7 @@ $trans-arrow: $trans-hover
       transition: transform .2s ease
     &:hover
       svg
-        transform: rotate(0) translateY(-0.1em)
+        transform: rotate(0) translateY(-0.05em)
         transition: transform .2s ease
 
   &-Container
@@ -81,23 +81,23 @@ $trans-arrow: $trans-hover
     //     transform: translateY(-0.1em)
     //     transition: transform .2s ease
 
-    // &.zoom
-    //   .prevNext
-    //     transition: transform $trans-arrow, scale $trans-arrow
-    //     scale: 1
-    //     svg
-    //       transition: all $trans-arrow
+    &.zoom
+      .prevNext
+        transition: transform $trans-arrow, scale $trans-arrow
+        scale: 1
+        svg
+          transition: all $trans-arrow
 
-    //     &:hover
-    //       scale: 1.04
-    //       svg
-    //         transition: all $trans-arrow
+        &:hover
+          scale: 1.04
+          svg
+            transition: all $trans-arrow
 
-    //     &_Next
-    //       &:hover
-    //         transform: translateX(4%)
+        &_Next
+          &:hover
+            transform: translateX(4%)
 
-    //     &_Prev
-    //       &:hover
-    //         transform: translateX(-4%) rotate(180deg)
+        &_Prev
+          &:hover
+            transform: translateX(-4%) rotate(180deg)
 </style>
