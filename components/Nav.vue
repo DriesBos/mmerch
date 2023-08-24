@@ -1,7 +1,7 @@
 <template>
   <div class="nav">
-    <span class="link-scale">hyperlink</span>
-    <span class="link-scale">hyperlink</span>
+    <span class="link-up">hyperlink</span>
+    <span class="link-up">hyperlink</span>
     <span class="link-up">hyperlink</span>
     <span class="link-up">hyperlink</span>
   </div>
