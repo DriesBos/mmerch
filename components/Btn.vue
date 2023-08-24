@@ -24,7 +24,6 @@ $trans-btn: $trans-hover
   border-radius: $border-radius
   cursor: pointer
   white-space: nowrap
-  scale: 1
   span
     color: black
     text-transform: none
@@ -60,19 +59,23 @@ $trans-btn: $trans-hover
     span
       transition: color $trans-btn
 
-  &.up
-    transform: translateY(0)
-    transition: transform .4s ease
-    &:hover
-      transform: translateY(-0.1em)
-      transition: transform .2s ease
+  // &.up
+  //   transform: translateY(0)
+  //   transition: transform .4s ease
+  //   &:hover
+  //     transform: translateY(-0.1em)
+  //     transition: transform .2s ease
 
   &.zoom
-    transition: border $trans-btn, background $trans-btn, scale $trans-btn
+    scale: 1
+    transition: .4s ease-out
     span
-      transition: color $trans-btn
+      transition: .4s ease-out
     &:hover
       scale: 1.02
+      transition: .2s ease-in
+      span
+        transition: .2s ease-in
 
   &.zoomTwo
     transition: border $trans-btn, background $trans-btn, scale $trans-btn
