@@ -26,6 +26,8 @@ $trans-arrow: $trans-hover
   color: $color
   width: 2.5rem
   height: 2.5rem
+  scale: 1
+  transition: .4s ease-out
   svg
     width: 100%
     height: 100%
@@ -33,26 +35,13 @@ $trans-arrow: $trans-hover
     fill: transparent
 
   &:hover
+    scale: 1.02
+    transition: .2s ease-in
     svg
       fill: $color-red
 
   &-Prev
-    svg
-      transform: rotate(180deg) translateY(0)
-      transition: transform .2s ease
-    &:hover
-      svg
-        transform: rotate(180deg) translateY(0.05em)
-        transition: transform .2s ease
-
-  &-Next
-    svg
-      transform: rotate(0) translateY(0)
-      transition: transform .2s ease
-    &:hover
-      svg
-        transform: rotate(0) translateY(-0.05em)
-        transition: transform .2s ease
+    transform: rotate(180deg)
 
   &-Container
     width: 100%
@@ -81,23 +70,23 @@ $trans-arrow: $trans-hover
     //     transform: translateY(-0.1em)
     //     transition: transform .2s ease
 
-    &.zoom
-      .prevNext
-        transition: transform $trans-arrow, scale $trans-arrow
-        scale: 1
-        svg
-          transition: all $trans-arrow
+    // &.zoom
+    //   .prevNext
+    //     transition: transform $trans-arrow, scale $trans-arrow
+    //     scale: 1
+    //     svg
+    //       transition: all $trans-arrow
 
-        &:hover
-          scale: 1.04
-          svg
-            transition: all $trans-arrow
+    //     &:hover
+    //       scale: 1.04
+    //       svg
+    //         transition: all $trans-arrow
 
-        &_Next
-          &:hover
-            transform: translateX(4%)
+    //     &_Next
+    //       &:hover
+    //         transform: translateX(4%)
 
-        &_Prev
-          &:hover
-            transform: translateX(-4%) rotate(180deg)
+    //     &_Prev
+    //       &:hover
+    //         transform: translateX(-4%) rotate(180deg)
 </style>
