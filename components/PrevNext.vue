@@ -27,7 +27,7 @@ $trans-arrow: $trans-hover
   width: 2.5rem
   height: 2.5rem
   scale: 1
-  transition: .4s ease-out
+  transition: .2s ease-out
   svg
     width: 100%
     height: 100%
